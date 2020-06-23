@@ -48,6 +48,7 @@ public class GETRequestIntro {
         // Execute (click on Send button)
        HttpResponse response= client.execute(get); // we decleared
 
+
         Assert.assertEquals(200,response.getStatusLine().getStatusCode());
         System.out.println("Status code for GET request is: "+response.getStatusLine().getStatusCode());
 //        System.out.println(response.getStatusLine().getProtocolVersion());
