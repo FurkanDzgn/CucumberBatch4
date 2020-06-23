@@ -82,7 +82,7 @@ public class CucumberTestSteps {
             for(String key: keys){
                 System.out.println(dt.get(key));
             }
-      //      System.out.println(dt);
+            System.out.println(dt);
         }
 
     }

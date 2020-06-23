@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.76">
+    <testcase classname=": All Products" name="Validation of All products" time="7.461">
+        <system-out>
+            <![CDATA[Given the demoUser enters username "Tester".................................passed
+When the demoUser enters password "test"....................................passed
+Then the demoUser clicks the login Button...................................passed
+Then the user clicks the allProducs button..................................passed
+And the user calidate the product details...................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

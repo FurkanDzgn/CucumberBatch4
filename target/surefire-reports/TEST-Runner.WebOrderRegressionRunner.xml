@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Runner.WebOrderRegressionRunner" time="27.464" tests="13" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="java.specification.version" value="13"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\12242\IdeaProjects\CucumberBatch4\target\test-classes;C:\Users\12242\IdeaProjects\CucumberBatch4\target\classes;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\12242\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\12242\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\12242\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\12242\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\12242\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\12242\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\12242\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\12242\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\12242\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\12242\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-java\5.7.0\cucumber-java-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-core\5.7.0\cucumber-core-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-gherkin\5.7.0\cucumber-gherkin-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-gherkin-vintage\5.7.0\cucumber-gherkin-vintage-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\tag-expressions\2.0.4\tag-expressions-2.0.4.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-expressions\8.3.1\cucumber-expressions-8.3.1.jar;C:\Users\12242\.m2\repository\io\cucumber\datatable\3.3.1\datatable-3.3.1.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-plugin\5.7.0\cucumber-plugin-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\docstring\5.7.0\docstring-5.7.0.jar;C:\Users\12242\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-junit\5.7.0\cucumber-junit-5.7.0.jar;C:\Users\12242\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\12242\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\12242\.m2\repository\io\github\bonigarcia\webdrivermanager\4.0.0\webdrivermanager-4.0.0.jar;C:\Users\12242\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\12242\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\12242\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\12242\.m2\repository\org\apache\commons\commons-lang3\3.10\commons-lang3-3.10.jar;C:\Users\12242\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0\httpclient5-5.0.jar;C:\Users\12242\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0\httpcore5-5.0.jar;C:\Users\12242\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0\httpcore5-h2-5.0.jar;C:\Users\12242\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\12242\.m2\repository\org\rauschig\jarchivelib\1.0.0\jarchivelib-1.0.0.jar;C:\Users\12242\.m2\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;C:\Users\12242\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="13"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\12242\AppData\Local\Temp\surefire14113627075906290767\surefirebooter14784428348018436111.jar C:\Users\12242\AppData\Local\Temp\surefire14113627075906290767 2020-06-17T23-09-56_422-jvmRun1 surefire13902983002973256279tmp surefire_011077086950207841952tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\12242\IdeaProjects\CucumberBatch4\target\test-classes;C:\Users\12242\IdeaProjects\CucumberBatch4\target\classes;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\12242\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\12242\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\12242\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\12242\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\12242\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\12242\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\12242\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\12242\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\12242\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\12242\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\12242\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-java\5.7.0\cucumber-java-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-core\5.7.0\cucumber-core-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-gherkin\5.7.0\cucumber-gherkin-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-gherkin-vintage\5.7.0\cucumber-gherkin-vintage-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\tag-expressions\2.0.4\tag-expressions-2.0.4.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-expressions\8.3.1\cucumber-expressions-8.3.1.jar;C:\Users\12242\.m2\repository\io\cucumber\datatable\3.3.1\datatable-3.3.1.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-plugin\5.7.0\cucumber-plugin-5.7.0.jar;C:\Users\12242\.m2\repository\io\cucumber\docstring\5.7.0\docstring-5.7.0.jar;C:\Users\12242\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\12242\.m2\repository\io\cucumber\cucumber-junit\5.7.0\cucumber-junit-5.7.0.jar;C:\Users\12242\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\12242\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\12242\.m2\repository\io\github\bonigarcia\webdrivermanager\4.0.0\webdrivermanager-4.0.0.jar;C:\Users\12242\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\12242\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\12242\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\12242\.m2\repository\org\apache\commons\commons-lang3\3.10\commons-lang3-3.10.jar;C:\Users\12242\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0\httpclient5-5.0.jar;C:\Users\12242\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0\httpcore5-5.0.jar;C:\Users\12242\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0\httpcore5-h2-5.0.jar;C:\Users\12242\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\12242\.m2\repository\org\rauschig\jarchivelib\1.0.0\jarchivelib-1.0.0.jar;C:\Users\12242\.m2\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;C:\Users\12242\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\12242"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-01-14"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-13.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\12242\IdeaProjects\CucumberBatch4"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="C:\Users\12242\AppData\Local\Temp\surefire14113627075906290767\surefirebooter14784428348018436111.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="13.0.2+8"/>
+    <property name="user.name" value="12242"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\12242\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\12242\AppData\Local\Temp\"/>
+    <property name="java.version" value="13.0.2"/>
+    <property name="user.dir" value="C:\Users\12242\IdeaProjects\CucumberBatch4"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-13.0.2\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.6.3\bin;C:\Users\12242\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="13.0.2+8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="57.0"/>
+  </properties>
+  <testcase name="Login Functionality Positive Test" classname="WebOrder Login page Test" time="7.205"/>
+  <testcase name="Login Functionality Negative Test" classname="WebOrder Login page Test" time="0.364"/>
+  <testcase name="Login Functionality Negative Test 1" classname="WebOrder Login page Test" time="0.35"/>
+  <testcase name="Login Functionality Negative Test 2" classname="WebOrder Login page Test" time="0.797">
+    <failure message="Error Meage Validation expected:&lt;...id Login or Password[]&gt; but was:&lt;...id Login or Password[.]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: Error Meage Validation expected:<...id Login or Password[]> but was:<...id Login or Password[.]>
+]]></failure>
+    <system-out><![CDATA[
+@smoke @negative
+Scenario: Login Functionality Negative Test 2                     &amp#27;[90m# src/test/resources/com.WebOrder/Logintest.feature:24&amp#27;[0m
+Login Page Step Class
+This one will run before each scenario
+Login Functionality Negative Test 2
+Before Step Annotation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe demoUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"Techtorial"&amp#27;[0m                 &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_username(java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe demoUser enters password &amp#27;[0m&amp#27;[32m&amp#27;[1m"tttt"&amp#27;[0m                        &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_password(java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe demoUser clicks the login Button&amp#27;[0m                       &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_clicks_the_login_Button()&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mthe demoUser validate the text &amp#27;[0m&amp#27;[31m&amp#27;[1m"Invalid Login or Password"&amp#27;[0m &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_validate_the_text(java.lang.String)&amp#27;[0m
+      &amp#27;[31morg.junit.ComparisonFailure: Error Meage Validation expected:<...id Login or Password[]> but was:<...id Login or Password[.]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_validate_the_text(LoginPageSteps.java:84)
+	at ?.the demoUser validate the text "Invalid Login or Password"(file:///C:/Users/12242/IdeaProjects/CucumberBatch4/src/test/resources/com.WebOrder/Logintest.feature:28)
+&amp#27;[0m
+After Step Annotation
+This one will run after each scenario
+failed
+]]></system-out>
+  </testcase>
+  <testcase name="Validate new Order in WebOrder page" classname="New Order validation" time="2.138"/>
+  <testcase name="Validate new Order in WebOrder page" classname="New Order validation" time="1.973"/>
+  <testcase name="Validate new Order in WebOrder page" classname="New Order validation" time="2"/>
+  <testcase name="Validate new Order in WebOrder page" classname="New Order validation" time="2.001"/>
+  <testcase name="Validation of new order headers" classname="Validation of headers" time="0.939"/>
+  <testcase name="New Order Validation" classname="Validation of New Order using Scenario Outline" time="2.701">
+    <failure message="expected:&lt;06/1[7]/2020&gt; but was:&lt;06/1[8]/2020&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<06/1[7]/2020> but was:<06/1[8]/2020>
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: New Order Validation                                                                                                                         &amp#27;[90m# src/test/resources/com.WebOrder/NewOrderOutline.feature:15&amp#27;[0m
+Login Page Step Class
+This one will run before each scenario
+New Order Validation
+Before Step Annotation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe demoUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tester"&amp#27;[0m                                                                                                                  &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_username(java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe demoUser enters password &amp#27;[0m&amp#27;[32m&amp#27;[1m"test"&amp#27;[0m                                                                                                                     &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_password(java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe demoUser clicks the login Button&amp#27;[0m                                                                                                                    &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_clicks_the_login_Button()&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe user enters product info &amp#27;[0m&amp#27;[32m&amp#27;[1m"MyMoney"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"10"&amp#27;[0m                                                                                                         &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_enters_product_info_and(java.lang.String,java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user enter address info &amp#27;[0m&amp#27;[32m&amp#27;[1m"Franklin"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"2200 E Devon"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Des Plaines"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Illinois"&amp#27;[0m&amp#27;[32m,&amp#27;[0m&amp#27;[32m&amp#27;[1m"60018"&amp#27;[0m                                                                &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_enter_address_info(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32m* &amp#27;[0m&amp#27;[32mthe user enters payment info &amp#27;[0m&amp#27;[32m&amp#27;[1m"Visa"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4444333322221111"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"05/24"&amp#27;[0m                                                                                           &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_enters_payment_info(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe user validate success message&amp#27;[0m                                                                                                                       &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_validate_success_message()&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mthe user validate new order details &amp#27;[0m&amp#27;[31m&amp#27;[1m"MyMoney"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"10"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"Franklin"&amp#27;[0m&amp#27;[31m,  &amp#27;[0m&amp#27;[31m&amp#27;[1m"2200 E Devon"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"Des Plaines"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"Illinois"&amp#27;[0m&amp#27;[31m,&amp#27;[0m&amp#27;[31m&amp#27;[1m"60018"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"Visa"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"4444333322221111"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"05/24"&amp#27;[0m &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_validate_new_order_details(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+      &amp#27;[31morg.junit.ComparisonFailure: expected:<06/1[7]/2020> but was:<06/1[8]/2020>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinitions.com.weborder.NewOrderSteps.the_user_validate_new_order_details(NewOrderSteps.java:91)
+	at ?.the user validate new order details "MyMoney", "10", "Franklin",  "2200 E Devon", "Des Plaines", "Illinois","60018", "Visa", "4444333322221111", "05/24"(file:///C:/Users/12242/IdeaProjects/CucumberBatch4/src/test/resources/com.WebOrder/NewOrderOutline.feature:11)
+&amp#27;[0m
+After Step Annotation
+This one will run after each scenario
+failed
+]]></system-out>
+  </testcase>
+  <testcase name="New Order Validation" classname="Validation of New Order using Scenario Outline" time="2.696">
+    <failure message="expected:&lt;06/1[7]/2020&gt; but was:&lt;06/1[8]/2020&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<06/1[7]/2020> but was:<06/1[8]/2020>
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: New Order Validation                                                                                                                           &amp#27;[90m# src/test/resources/com.WebOrder/NewOrderOutline.feature:16&amp#27;[0m
+Login Page Step Class
+This one will run before each scenario
+New Order Validation
+Before Step Annotation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe demoUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tester"&amp#27;[0m                                                                                                                    &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_username(java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe demoUser enters password &amp#27;[0m&amp#27;[32m&amp#27;[1m"test"&amp#27;[0m                                                                                                                       &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_password(java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe demoUser clicks the login Button&amp#27;[0m                                                                                                                      &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_clicks_the_login_Button()&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe user enters product info &amp#27;[0m&amp#27;[32m&amp#27;[1m"FamilyAlbum"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"5"&amp#27;[0m                                                                                                        &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_enters_product_info_and(java.lang.String,java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user enter address info &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kallin"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"2222 E Devon"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Chicago"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Arizona"&amp#27;[0m&amp#27;[32m,&amp#27;[0m&amp#27;[32m&amp#27;[1m"50456"&amp#27;[0m                                                                         &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_enter_address_info(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32m* &amp#27;[0m&amp#27;[32mthe user enters payment info &amp#27;[0m&amp#27;[32m&amp#27;[1m"MasterCard"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"3333222211114444"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"05/27"&amp#27;[0m                                                                                       &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_enters_payment_info(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe user validate success message&amp#27;[0m                                                                                                                         &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_validate_success_message()&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mthe user validate new order details &amp#27;[0m&amp#27;[31m&amp#27;[1m"FamilyAlbum"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"5"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"Kallin"&amp#27;[0m&amp#27;[31m,  &amp#27;[0m&amp#27;[31m&amp#27;[1m"2222 E Devon"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"Chicago"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"Arizona"&amp#27;[0m&amp#27;[31m,&amp#27;[0m&amp#27;[31m&amp#27;[1m"50456"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"MasterCard"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"3333222211114444"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"05/27"&amp#27;[0m &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_validate_new_order_details(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+      &amp#27;[31morg.junit.ComparisonFailure: expected:<06/1[7]/2020> but was:<06/1[8]/2020>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinitions.com.weborder.NewOrderSteps.the_user_validate_new_order_details(NewOrderSteps.java:91)
+	at ?.the user validate new order details "FamilyAlbum", "5", "Kallin",  "2222 E Devon", "Chicago", "Arizona","50456", "MasterCard", "3333222211114444", "05/27"(file:///C:/Users/12242/IdeaProjects/CucumberBatch4/src/test/resources/com.WebOrder/NewOrderOutline.feature:11)
+&amp#27;[0m
+After Step Annotation
+This one will run after each scenario
+failed
+]]></system-out>
+  </testcase>
+  <testcase name="New Order Validation" classname="Validation of New Order using Scenario Outline" time="2.621">
+    <failure message="expected:&lt;06/1[7]/2020&gt; but was:&lt;06/1[8]/2020&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<06/1[7]/2020> but was:<06/1[8]/2020>
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: New Order Validation                                                                                                                                &amp#27;[90m# src/test/resources/com.WebOrder/NewOrderOutline.feature:17&amp#27;[0m
+Login Page Step Class
+This one will run before each scenario
+New Order Validation
+Before Step Annotation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe demoUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tester"&amp#27;[0m                                                                                                                         &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_username(java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe demoUser enters password &amp#27;[0m&amp#27;[32m&amp#27;[1m"test"&amp#27;[0m                                                                                                                            &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_password(java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe demoUser clicks the login Button&amp#27;[0m                                                                                                                           &amp#27;[90m# StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_clicks_the_login_Button()&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe user enters product info &amp#27;[0m&amp#27;[32m&amp#27;[1m"ScreenSaver"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"3"&amp#27;[0m                                                                                                             &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_enters_product_info_and(java.lang.String,java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe user enter address info &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jessica"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"3445 E Levon"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Winterfall"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"LA"&amp#27;[0m&amp#27;[32m,&amp#27;[0m&amp#27;[32m&amp#27;[1m"67088"&amp#27;[0m                                                                               &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_enter_address_info(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32m* &amp#27;[0m&amp#27;[32mthe user enters payment info &amp#27;[0m&amp#27;[32m&amp#27;[1m"American Express"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1111333322224444"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"02/23"&amp#27;[0m                                                                                      &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_enters_payment_info(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe user validate success message&amp#27;[0m                                                                                                                              &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_validate_success_message()&amp#27;[0m
+After Step Annotation
+Before Step Annotation
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mthe user validate new order details &amp#27;[0m&amp#27;[31m&amp#27;[1m"ScreenSaver"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"3"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"Jessica"&amp#27;[0m&amp#27;[31m,  &amp#27;[0m&amp#27;[31m&amp#27;[1m"3445 E Levon"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"Winterfall"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"LA"&amp#27;[0m&amp#27;[31m,&amp#27;[0m&amp#27;[31m&amp#27;[1m"67088"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"American Express"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"1111333322224444"&amp#27;[0m&amp#27;[31m, &amp#27;[0m&amp#27;[31m&amp#27;[1m"02/23"&amp#27;[0m &amp#27;[90m# StepDefinitions.com.weborder.NewOrderSteps.the_user_validate_new_order_details(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+      &amp#27;[31morg.junit.ComparisonFailure: expected:<06/1[7]/2020> but was:<06/1[8]/2020>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinitions.com.weborder.NewOrderSteps.the_user_validate_new_order_details(NewOrderSteps.java:91)
+	at ?.the user validate new order details "ScreenSaver", "3", "Jessica",  "3445 E Levon", "Winterfall", "LA","67088", "American Express", "1111333322224444", "02/23"(file:///C:/Users/12242/IdeaProjects/CucumberBatch4/src/test/resources/com.WebOrder/NewOrderOutline.feature:11)
+&amp#27;[0m
+After Step Annotation
+This one will run after each scenario
+failed
+]]></system-out>
+  </testcase>
+  <testcase name="Validation of All products" classname=": All Products" time="0.865"/>
+</testsuite>

@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: Runner.WebOrderRegressionRunner
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 27.464 s <<< FAILURE! - in Runner.WebOrderRegressionRunner
+Login Functionality Negative Test 2(WebOrder Login page Test)  Time elapsed: 0.797 s  <<< FAILURE!
+org.junit.ComparisonFailure: Error Meage Validation expected:<...id Login or Password[]> but was:<...id Login or Password[.]>
+
+New Order Validation(Validation of New Order using Scenario Outline)  Time elapsed: 2.701 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<06/1[7]/2020> but was:<06/1[8]/2020>
+
+New Order Validation(Validation of New Order using Scenario Outline)  Time elapsed: 2.696 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<06/1[7]/2020> but was:<06/1[8]/2020>
+
+New Order Validation(Validation of New Order using Scenario Outline)  Time elapsed: 2.621 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<06/1[7]/2020> but was:<06/1[8]/2020>
+

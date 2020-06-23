@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class HomePage {
 
     // If i dont have nullPointerException
@@ -23,4 +25,13 @@ public class HomePage {
 
     @FindBy(xpath = "//a[.='View all orders']")
     public WebElement ViewAllOrdersButton;
+
+    @FindBy(xpath = "//a[.='View all products']")
+    public WebElement viewAllProductButton;
+
+    @FindBy(xpath = "//table[@class='ProductsTable']//tr")
+    public List<WebElement> productTable;
+
+    @FindBy(xpath = "//table[@class='ProductsTable']//tr//*")
+    public List<WebElement> getProductTable;
 }

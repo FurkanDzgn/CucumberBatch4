@@ -4,6 +4,7 @@ import Pages.WebOrderPages.AllOrdersPage;
 import Pages.WebOrderPages.HomePage;
 import Pages.WebOrderPages.OrderPage;
 import Utils.BrowserUtils;
+
 import Utils.Driver;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
@@ -17,6 +18,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class NewOrderSteps {
     WebDriver driver= Driver.getDriver();
@@ -83,6 +85,8 @@ public class NewOrderSteps {
         Assert.assertEquals(ProductName,orderDetails.get(2).getText());
         Assert.assertEquals(quantity,orderDetails.get(3).getText());
 
+        //While we are asserting in JUNIT first Expected and second actual
+        //In TestNG first actual then expected
         String today=BrowserUtils.todaysDate("MM/dd/yyyy");
         Assert.assertEquals(today,orderDetails.get(4).getText());
         Assert.assertEquals(address,orderDetails.get(5).getText());
@@ -133,6 +137,38 @@ public class NewOrderSteps {
         Assert.assertEquals(expectedAddressHeaders,actualAddressHeader);
 
     }
+
+    @Then("the user clicks the allProducs button")
+    public void the_user_clicks_the_allProducs_button() {
+        homePage.viewAllProductButton.click();
+    }
+
+    @Then("the user calidate the product details")
+    public void the_user_calidate_the_product_details(DataTable dataTable) { // io.cucumber.datatable.DataTable dataTable
+             // List<String> dataTable-
+
+        List<WebElement> pTable=homePage.getProductTable;
+        for (int i=0;i<dataTable.asList().size();i++){
+            Assert.assertEquals("Validation of product table",dataTable.asList().get(i),pTable.get(i).getText());
+//            System.out.println(dataTable.asList().get(i));
+//            System.out.println(pTable.get(i).getText());
+        }
+
+//        for(WebElement row:homePage.productTable){
+//            System.out.println(row.getText());
+//        }
+
+
+        // Write code here that turns the phrase above into concrete actions
+        // For automatic transformation, change DataTable to one of
+        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+        // Double, Byte, Short, Long, BigInteger or BigDecimal.
+        //
+        // For other transformations you can register a DataTableType.
+     //   throw new io.cucumber.java.PendingException();
+    }
+
 
 
 }
