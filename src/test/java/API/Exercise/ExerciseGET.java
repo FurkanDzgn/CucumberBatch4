@@ -1,4 +1,4 @@
-package API;
+package API.Exercise;
 
 
 import org.apache.http.HttpResponse;
@@ -12,7 +12,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
-public class Exercise {
+public class ExerciseGET {
 
     @Test
     public void getRequestEx() throws URISyntaxException, IOException {
