@@ -1,12 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.76">
-    <testcase classname=": All Products" name="Validation of All products" time="7.461">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="2.237">
+    <testcase classname="Api First scenario" name="Api POST scenario" time="1.088">
         <system-out>
-            <![CDATA[Given the demoUser enters username "Tester".................................passed
-When the demoUser enters password "test"....................................passed
-Then the demoUser clicks the login Button...................................passed
-Then the user clicks the allProducs button..................................passed
-And the user calidate the product details...................................passed
+            <![CDATA[When user creates a pet with "123456", "Kumar", "available".................passed
+Then the status code is 200.................................................passed
+And pet with "123456", "Kumar", "available" is created......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Api First scenario" name="Api POST scenario 2" time="0.189">
+        <system-out>
+            <![CDATA[When user creates a pet with "234335", "Patel", "do not touch"..............passed
+Then the status code is 200.................................................passed
+And pet with "234335", "Patel", "do not touch" is created...................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Api First scenario" name="Api POST scenario 3" time="0.21">
+        <system-out>
+            <![CDATA[When user creates a pet with "23424", "Jack", "busy"........................passed
+Then the status code is 200.................................................passed
+And pet with "23424", "Jack", "busy" is created.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Api First scenario" name="Api POST scenario 4" time="0.21">
+        <system-out>
+            <![CDATA[When user creates a pet with "24253235", "Pikachu", "messy".................passed
+Then the status code is 200.................................................passed
+And pet with "24253235", "Pikachu", "messy" is created......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Api First scenario" name="Api POST scenario 5" time="0.194">
+        <system-out>
+            <![CDATA[When user creates a pet with "225235", "Frank", "busy"......................passed
+Then the status code is 200.................................................passed
+And pet with "225235", "Frank", "busy" is created...........................passed
 ]]>
         </system-out>
     </testcase>

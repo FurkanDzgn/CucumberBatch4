@@ -1,19 +1,118 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-06-19T21:56:30.896Z",
+        "start_timestamp": "2020-06-29T02:47:48.122Z",
         "before": [
           {
             "result": {
-              "duration": 5866735700,
+              "duration": 997300,
               "status": "passed"
             },
             "match": {
-              "location": "StepDefinitions.com.weborder.LoginPageSteps.message()"
+              "location": "StepDefinitions.Hooks.setUp(io.cucumber.java.Scenario)"
             }
+          }
+        ],
+        "line": 10,
+        "name": "Api POST scenario",
+        "description": "",
+        "id": "api-first-scenario;api-post-scenario;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 865500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 850340100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user creates a pet with \"123456\", \"Kumar\", \"available\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"123456\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"Kumar\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"available\"",
+                  "offset": 43
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.user_creates_a_pet_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
           },
+          {
+            "result": {
+              "duration": 2931000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.the_status_code_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 167359800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "pet with \"123456\", \"Kumar\", \"available\" is created",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"123456\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"Kumar\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"available\"",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.pet_with_is_created(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Api"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T02:47:49.227Z",
+        "before": [
           {
             "result": {
               "status": "passed"
@@ -23,14 +122,13 @@
             }
           }
         ],
-        "line": 3,
-        "name": "Validation of All products",
+        "line": 11,
+        "name": "Api POST scenario",
         "description": "",
-        "id": ":-all-products;validation-of-all-products",
+        "id": "api-first-scenario;api-post-scenario;;3",
         "after": [
           {
             "result": {
-              "duration": 997100,
               "status": "passed"
             },
             "match": {
@@ -39,220 +137,416 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 342085700,
+              "duration": 173629200,
               "status": "passed"
             },
-            "before": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.beforeStep()"
-                }
-              }
-            ],
-            "line": 4,
-            "name": "the demoUser enters username \"Tester\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Tester\"",
-                  "offset": 29
-                }
-              ],
-              "location": "StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_username(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.afterStep()"
-                }
-              }
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 84773500,
-              "status": "passed"
-            },
-            "before": [
-              {
-                "result": {
-                  "duration": 996200,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.beforeStep()"
-                }
-              }
-            ],
             "line": 5,
-            "name": "the demoUser enters password \"test\"",
+            "name": "user creates a pet with \"234335\", \"Patel\", \"do not touch\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"test\"",
-                  "offset": 29
+                  "val": "\"234335\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"Patel\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"do not touch\"",
+                  "offset": 43
                 }
               ],
-              "location": "StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_enters_password(java.lang.String)"
+              "location": "StepDefinitions.API.ApiStepDef.user_creates_a_pet_with(java.lang.String,java.lang.String,java.lang.String)"
             },
-            "after": [
-              {
-                "result": {
-                  "duration": 997300,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.afterStep()"
-                }
-              }
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 530655000,
               "status": "passed"
             },
-            "before": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.beforeStep()"
-                }
-              }
-            ],
             "line": 6,
-            "name": "the demoUser clicks the login Button",
+            "name": "the status code is 200",
             "match": {
-              "location": "StepDefinitions.com.weborder.LoginPageSteps.the_demoUser_clicks_the_login_Button()"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.afterStep()"
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
                 }
-              }
-            ],
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.the_status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 140594500,
+              "duration": 5509600,
               "status": "passed"
             },
-            "before": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.beforeStep()"
-                }
-              }
-            ],
             "line": 7,
-            "name": "the user clicks the allProducs button",
+            "name": "pet with \"234335\", \"Patel\", \"do not touch\" is created",
             "match": {
-              "location": "StepDefinitions.com.weborder.NewOrderSteps.the_user_clicks_the_allProducs_button()"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
+              "arguments": [
+                {
+                  "val": "\"234335\"",
+                  "offset": 9
                 },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.afterStep()"
+                {
+                  "val": "\"Patel\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"do not touch\"",
+                  "offset": 28
                 }
-              }
-            ],
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.pet_with_is_created(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Api"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T02:47:49.433Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Api POST scenario",
+        "description": "",
+        "id": "api-first-scenario;api-post-scenario;;4",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 191421800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user creates a pet with \"23424\", \"Jack\", \"busy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"23424\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"Jack\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"busy\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.user_creates_a_pet_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6783600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.the_status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 438824400,
+              "duration": 3793400,
               "status": "passed"
             },
-            "before": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.beforeStep()"
-                }
-              }
-            ],
-            "line": 8,
-            "name": "the user calidate the product details",
+            "line": 7,
+            "name": "pet with \"23424\", \"Jack\", \"busy\" is created",
             "match": {
-              "location": "StepDefinitions.com.weborder.NewOrderSteps.the_user_calidate_the_product_details(io.cucumber.datatable.DataTable)"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
+              "arguments": [
+                {
+                  "val": "\"23424\"",
+                  "offset": 9
                 },
-                "match": {
-                  "location": "StepDefinitions.com.weborder.LoginPageSteps.afterStep()"
+                {
+                  "val": "\"Jack\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"busy\"",
+                  "offset": 26
                 }
-              }
-            ],
-            "rows": [
-              {
-                "cells": [
-                  "Product name",
-                  "Price",
-                  "Discount"
-                ]
-              },
-              {
-                "cells": [
-                  "MyMoney",
-                  "$100",
-                  "8%"
-                ]
-              },
-              {
-                "cells": [
-                  "FamilyAlbum",
-                  "$80",
-                  "15%"
-                ]
-              },
-              {
-                "cells": [
-                  "ScreenSaver",
-                  "$20",
-                  "10%"
-                ]
-              }
-            ],
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.pet_with_is_created(java.lang.String,java.lang.String,java.lang.String)"
+            },
             "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Api"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T02:47:49.658Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Api POST scenario",
+        "description": "",
+        "id": "api-first-scenario;api-post-scenario;;5",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 196126200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user creates a pet with \"24253235\", \"Pikachu\", \"messy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24253235\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"Pikachu\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"messy\"",
+                  "offset": 47
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.user_creates_a_pet_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2042000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.the_status_code_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2490400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "pet with \"24253235\", \"Pikachu\", \"messy\" is created",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24253235\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"Pikachu\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"messy\"",
+                  "offset": 32
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.pet_with_is_created(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Api"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-29T02:47:49.879Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Api POST scenario",
+        "description": "",
+        "id": "api-first-scenario;api-post-scenario;;6",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 179229600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user creates a pet with \"225235\", \"Frank\", \"busy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"225235\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"Frank\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"busy\"",
+                  "offset": 43
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.user_creates_a_pet_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.the_status_code_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4017000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "pet with \"225235\", \"Frank\", \"busy\" is created",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"225235\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"Frank\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"busy\"",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefinitions.API.ApiStepDef.pet_with_is_created(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Api"
           }
         ]
       }
     ],
-    "name": ": All Products",
+    "name": "Api First scenario",
     "description": "",
-    "id": ":-all-products",
+    "id": "api-first-scenario",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/com.WebOrder/ProductDataTable.feature",
-    "tags": []
+    "uri": "file:src/test/resources/APIFiles/CreatePet.feature",
+    "tags": [
+      {
+        "name": "@Api",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

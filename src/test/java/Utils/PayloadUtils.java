@@ -1,5 +1,9 @@
 package Utils;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class PayloadUtils { // requestBody == Payload
 
     public static String getPetPayload(int id, String name, String status){
@@ -28,5 +32,12 @@ public class PayloadUtils { // requestBody == Payload
                 "    \"name\": \""+name+"\",\n" +
                 "    \"job\": \""+job+"\"\n" +
                 "}";
+    }
+
+    public static String generateStringFromResource(String path) throws IOException {
+
+        String petPayload=new String(Files.readAllBytes(Paths.get(path)));
+
+        return petPayload;
     }
 }

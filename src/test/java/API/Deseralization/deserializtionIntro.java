@@ -1,4 +1,4 @@
-package API;
+package API.Deseralization;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -88,4 +88,5 @@ public class deserializtionIntro {
         System.out.println(ad.get("url"));
         System.out.println(ad.get("text"));
     }
+
 }

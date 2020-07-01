@@ -6,9 +6,15 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src\\test\\resources\\APIFiles\\api.feature",
-        glue = "API",
-        dryRun = false
+        plugin = {"pretty",
+                "html:target\\cucumber-html-report",
+                "json:target\\cucumber.json",
+                "junit:target\\cucumber.xml",
+                "rerun:target\\rerun.txt" },
+        features = "src\\test\\resources\\APIFiles\\CreatePet.feature",
+        glue = "StepDefinitions",
+        dryRun = false,
+        tags ="@Api"
 )
 public class APIRunner {
 }

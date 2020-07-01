@@ -21,20 +21,20 @@ public class LoginPageSteps {
     LoginPage loginPage=new LoginPage(driver);
     HomePage homePage=new HomePage(driver);
 
-    @Before
-    public void message(){
-        System.out.println("Login Page Step Class");
-    }
-
-    @BeforeStep
-    public void beforeStep(){
-        System.out.println("Before Step Annotation");
-    }
-
-    @AfterStep
-    public void afterStep(){
-        System.out.println("After Step Annotation");
-    }
+//    @Before
+//    public void message(){
+//        System.out.println("Login Page Step Class");
+//    }
+//
+//    @BeforeStep
+//    public void beforeStep(){
+//        System.out.println("Before Step Annotation");
+//    }
+//
+//    @AfterStep
+//    public void afterStep(){
+//        System.out.println("After Step Annotation");
+//    }
 
     @Given("the demoUser enters username")
     public void the_demoUser_enters_username() {

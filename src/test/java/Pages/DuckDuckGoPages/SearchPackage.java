@@ -24,6 +24,4 @@ public class SearchPackage {
     @FindBy(xpath = "//a[@class='result__a']") // //div[@class='results--main']//a[@class='result__a']
     public List<WebElement> searchResult;
 
-
-
 }
