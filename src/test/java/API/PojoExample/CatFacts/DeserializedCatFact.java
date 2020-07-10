@@ -31,7 +31,8 @@ public class DeserializedCatFact {
         Assert.assertEquals(HttpStatus.SC_OK,httpResponse.getStatusLine().getStatusCode());
 
         ObjectMapper objectMapper=new ObjectMapper();
-        ResponseBodyCatFact parsedCats=objectMapper.readValue(httpResponse.getEntity().getContent(),ResponseBodyCatFact.class);
+        ResponseBodyCatFact parsedCats=objectMapper.readValue(httpResponse.getEntity().getContent(),
+                ResponseBodyCatFact.class);
 
         List<All> results=parsedCats.getAll();
 

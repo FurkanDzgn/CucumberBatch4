@@ -23,6 +23,7 @@ public class Results {
     private String edited;
     private String url;
 
+    // If we define all off them UnrecognizedPropertyException: give this exception
     public String getName() {
         return name;
     }

@@ -1,0 +1,482 @@
+plugins are tools and dependencies are files?
+
+AUTOMATION FRAMEWORKS
+1- Data-Driven Framework
+In Data-Driven framework we get the data from external sources. Excel file(Apache POI), CSV(comma separated values) file, YAML File, JSON file, Properties file(Properties Class from java), PDF file(PDFBox)
+
+2- Keyword Driven Framework
+All keys and actions stored inside excel file.
+| click()  | page.saveButton  |
+|   |    |
+
+3- Hybrid Framework
+	Hybrid framework is combination of Data-driven and keyword driven framework.
+
+4- Behaivor Driven Development framework (BDD Framework)
+Steps will be defined in human language so everyone can understand once they read the steps.
+-- Cucumber is the BDD framework where even non-technical people can understand what we are doing once they read.
+-- Cucumber is the BDD framework where everyone can understand what we are doing once they read.
+
+1- Cucumber Framework
+Gherking Language
+Given, When, Then, And, But, *
+Given the user navigates to the duckduckgo
+When the user search keyword selenium
+Then the user should see the selenium results
+And the user validate the title
+
+* the user validate the url
+- In cucumber, we have feature files where we define our steps in Gherkin language.
+- We have stepDefinitions package where we implement the code for our steps
+- We have runner package where we store our cucumber runner classes
+- Hook class -- TestBase
+- Pages
+
+Cucumber Dependencies
+- Selenium
+- Cucumber-Java
+- Cucumber-Junit
+- Junit (@Test, @Before, @After, @BeforeClass and @AfterClass), In cucumber framework I need JUnit for assertion.
+we will use mostly cucumber annotation (@Given, @When, @Then, @Before and @After)
+- Cucumber HTML report
+- WebDriverManager
+
+2- Configuration Properties
+Under Target folder we have compiled code of Java with .class extention.
+Source file has .java extention
+
+======================================
+
+RightCLick on top of Resources --> new --> file --> CucumberTest.feature
+Click IntellijIDEA(File) --> Preferences(Settings) --> PlugIns --> MarketPlace --> search cucumber installed cucumber for java and gherkin plugins
+Click IntellijIDEA(File) --> Preferences(Settings) --> search with file --> find the fileType --> click cucumber scenario --> add *.feature extention if you do not have under cucumber scenario
+In TestNG framework we have @Test annotation
+In cucumber Framework we have @Given, @When and @Then annotion
+1- Feature file
+2- StepDefinition
+3- Runner
+4- Pages
+
+============================================================================
+Properties File
+it stores the data with key and value. Extention of properties is .properties
+
+============================================================================
+
+=========================================
+BDD framework
+
+BDD framework fill out the gap between business people and technical people while we are working on the project.
+Cucumber Framework
+It is a BDD framework.
+
+We can write the scenarios with Gherkin language
+This gherkin language is basic daily language. It can be any other language.
+We have gherkin keyword like Given, When, Then, And, But, *
+We have three annotation for those keywords. @Given, @When, @Then
+We have only have one implementation for one step.
+Cucumber is not testing tool
+
+Three Amigos- BA/PO + QA(Tester) + Developer
+
+Advise for Cucumber Framework
+1- In one scenario do not user more than one Given, When, and Then keywords. You can use up to 2 And keyword
+2- In steps use the general definitions
+3- In one scenario do not use more than 5 steps
+
+Feature
+Feature keyword
+Scenario keyword
+Given
+When
+Then
+And
+*
+
+Given I send the username
+When the user send the password
+Then the user click the login button
+And the user should see the home page
+And the user validate the title of page
+Given the patient on the home page
+When the user open the register page
+Then the user validate patient details
+
+NOTE: DO not change the implemented code.
+Given the user login to the facebook page
+@Given("the user login to the facebook")
+public void login(){
+
+    username.sendkey("m@gmail.com");
+    password.sendkey("12345");
+}
+==============================================
+@CucumberOptions(
+        features = "",--> I need to provide the feature file path
+        glue = ""--> We need to provide step definition file path
+        monochrome = true --> it makes the console more readable
+        dryRun=true --> without running the feature it will give the unimplemented steps
+)
+=================================================
+
+runner class
+String values in scenario
+int values
+Tags
+Hooks
+Screenshot
+===================================
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        features={"filePathofFeaturefile","anotherFilePath"},
+        glue="filePathOfStepDefPackage",
+        monochrome=true,--> it makes your console more readable
+        dryRun=true
+)
+dryRun=true---> my feature will not be executed. It will only give the unimplemented steps.
+dryRun=false--> it will run the feature file.
+
+===============================================
+* In feature file or scenario we can use more than one tag.
+* We can give any name as a tag
+* We used to give testcase id as a tag name in scenario
+
+JIRA
+TestCase--> Zephyr plugin to create the test cases in Jira
+PSI-1304 is my test case id
+tags = {"@smoke","@negative"} ---> it will take a look all the feature files or scenarios which has @smoke and @negative tags. Then it will run those feature files or scenarios
+@smoke && @negative
+
+===============================================================
+
+TAGS
+
+It helps us to organize features and scenarios. We can run specific scenarios or features using these tags.
+
+3 key words
+* and
+* or
+* not
+
+RunWith(Cucumber.class)
+CucumberOptions(
+
+     features="",
+     glue="",
+     tags={"@smoke","@regression"} -->> it will only run the scenario three, It will look features or scenarios which has @smoke and @regression
+     at the same time.
+     ============
+     tags="@smoke and @regression" -->> it will only run the scenario three, It will look features or scenarios which has @smoke and @regression
+     at the same time.
+     ============
+     tags="@smoke or @regression" -->> it will look for features or scenarios has @smoke or @regression tag
+     ===========
+     tags="@smoke and not @regression" -->> it will look for scenarios or feature files which has @smoke tag and has not @regression tag
+)
+
+@smoke
+Scenario: one
+
+@regression
+Scenario: two
+
+@smoke @regression
+Scenario: three
+
+@smoke @regression
+Feature: four
+
+==================================
+
+What is hooks?
+I have hooks class in my framework. Inside this hooks class I have @Before and @After annotation. Those annotations will run before and after
+each scenario.
+
+Where Before and After annotation is coming from in Hooks class?
+They are coming from the Cucumber.
+
+Where are you using in your framework?
+1- @Before annotation --> I use it to login to the page
+2- @After annotation  --> I use it to take a screenshot if my scenario is failed.
+
+==========================
+
+@Before --> it will run before each scenario in any condition
+@After --> it will run after each scenario in any condition
+@BeforeStep
+@AfterStep
+Conditional Annotation
+@Before("@tagname")
+@After("@tagname")
+
+==========================
+
+Take a screenshot in Selenium Framework
+We want to take a screenshot after my scenario is failed.
+
+We have a method takeScreenShotAs();. It is coming from the selenium.
+
+==========================
+
+What is your Background keyword?
+In feature file before first scenario, I can use the Background keyword then define your step. It will run before each scenario
+
+==========================
+SCENARIO OUTLINE
+If you want to run same scenario with different data, we need to use to use the Scenario outline, we must use the example table.
+
+Scenario Outline: Validation of Search
+ When the user search in etsy with "<searchValue>"
+ Then the user validate the title "<title>" and url "<url>"
+Examples:
+| searchValue    | title                  | url     |
+| winter hat     | Winter hat \| Etsy     | winter  |
+| hat            | Hat \| Etsy            | hat     |
+| winter soldier | Winter soldier \| Etsy | soldier |
+
+===========================
+
+1- Tags
+ * and
+ * or
+ * not
+ * and not
+
+2- Before and After annotation --> each scenario
+Cucumber
+
+ * BeforeStep and AfterStep annotation --> each step
+
+ Conditional Annotation
+ @Before("@tagname")
+ @After("tagname")
+
+3- Background
+   * it will run before each scenario
+   * We need to use before first scenario in feature file
+
+4- Scenario Outlie/Scenario Template
+
+We can run same scenario with different set of data. We need to use example table in Scenario Outline.
+
+============================================================================================
+
+Scenario Outline: --> we can run the scenario multiple times with different set of data.You must use the example table.
+Example table must be last line of your scenario. After example you can not write the step.
+
+
+
+NullPointerExeption --> it means one of your object is pointing to the null.
+
+String str:
+HomePage homePage; --> this one is pointing null.
+
+homePage.submitButton.click(); --> will throw NullPointerExeption since We did not instantiatethe object.
+
+str.equals
+
+============================================
+
+DOC STRING
+
+If you need to provide large amount data in your scenario, we can use the doc string.It will keep put scenario mor organized. Doc string
+starts and ends with """
+
+"""
+TEXT
+
+"""
+
+============================================
+
+DATA TABLE IN CUCUMBER
+Using Selenium go to the UI and get the actual titles
+Then validate with expected titles.
+
+Scenario: validation of Title
+Then the user validate the product titles
+| Product:*         |
+| Quantity:*        |
+| Price per unit:   |
+| Discount:         |
+| Total:            |
+
+@Then("the user validate the product titles")
+public void the_user_validate_the_product_titles(Datatable table){
+
+	table.asList();
+
+}
+
+
+@Then("the user validate the product titles")
+public void the_user_validate_the_product_titles(List<Stirng> titles){
+
+}
+
+Scenario: validation of Title
+Then the user login to the page
+| username | Tester |
+| password | test   |
+
+
+@Then (the user login to the page)
+public void the_user_login_to_the_page(Datatable table){
+
+        table.asMap():
+
+}
+
+@Then (the user login to the page)
+public void the_user_login_to_the_page(Map<String, String> map){
+
+}
+
+
+Then the user validate "Product:*"
+Then the user validate "Quantity:*"
+
+Data table will not run the scenario multiple times. After datatable we can write another steps.
+
+
+
+Scenario: List of List
+Then the user validate order details
+
+
+| Name      | Product     |  #     | Date        | Street           |
+|Paul Brown	| ScreenSaver |	 2	   |03/12/2010   | 5, Ringer Street |
+|Mark Smith | FamilyAlbum |  1	   |03/07/2010	 | 9, Maple Valley  |
+
+@Then("the user validate order details")
+public void the_user_validate_order_details(List<List<String>> data){
+
+        data.get(0).get(4);
+        data.get(2).get(2);
+}
+
+
+Scenario: List of Map
+Then the user validate order details
+| Name      |Product     |  #   |Date       |   Street        |
+|Paul Brown |ScreenSaver |  2   |03/12/2010 |5, Ringer Street |
+|Mark Smith |FamilyAlbum |  1   | 03/07/2010|9, Maple Valley  |
+
+
+
+@Then("the user validate order details")
+public void the_user_validate_order_details(List<Map<String,String>> data){
+
+        data.get(0).get("Date");
+        data.get(0).get("Name");
+        data.get(1).get("Street");
+}
+
+========================================
+
+StaleElementThrowException -> There is exist before but after we don't see
+
+DuplicateStepDefinitionException --> if there is same two line at feature file
+
+
+Product name | 	Price  |	Discount
+MyMoney      | 	$100   |	8%
+FamilyAlbum	 |  $80	   |    15%
+ScreenSaver	 |  $20    |	10%
+
+=======================================
+
+How do you run only failed scenarios?
+
+In cucumber, we have one pluging which is called rerun plugin. Using this plugin we can only run our failed scenarious.
+This plugin will create one txt file to store feature file of your failed scenario.
+Using this txt file we can run our failed scenario.
+
+========================================
+
+While Creating the Bug the Parts which we need to add in Rally or Jira?
+
+1- Sprint
+2- Releated user story(Link the user story to this bug)
+3- Description:
+   -- General definiton of bug
+   -- Steps to reproduce the bug
+4- Add the evidence like screenshot or recording
+5- Name of the bug
+
+Description
+
+====================
+
+How to appload mnv
+---------  https://www.youtube.com/watch?v=RfCWg5ay5B0  ------------
+--------   https://www.youtube.com/watch?v=j0OnSAP-KtU&t=314s -------
+
+At Terminal
+mvn testting
+
+mvn -version  -->> I need to see mvn version on my terminal
+mvn -clean  -- >> clean my terminal
+mvn test  --- >>> If we change this name of test we test different runner class -->>  <include>**/*RegressionRunner.java</include>
+mvn verify -DskipTests  -->> give us pie chart
+target -> cucmberReports -> cucumberHtmlReports -> js -> overwiew-features.html -> right Click open with browser
+
+
+* If you want to test,you have to use assertion
+ JUnit -->> if i want to soft assert at JUnit we need to put dependencies
+ TestNG -->> has softAssert and hardAssert
+ Hamcrest -->> library
+
+ AsserThat()
+ String name= "techtorial";
+
+ AsserThat(name, is("techtorial"));
+
+ dom(document object model) is part of def tool
+
+
+
+ Given - precondition
+ When  - action
+ Then  - verification
+ And   - logical and
+ But   - negative scenario
+ *
+
+
+1.TELL ME HOW DO YOU FIND WEB ELEMENT? YOUR Favorite OPTION?
+2. in your company what testing types are you doing with selenium?
+3. Assertion types
+4. List out the technical challenges with Selenium?
+5.What is the difference between verify and assert commands? (hard assertion and soft assertion)
+6. Waits
+7. How you can use “submit” a form using Selenium ?
+8.Explain what is the difference between find elements () and find element ()?
+9.Datadriven framework and Keyword driven?
+10.Explain how to assert text of webpage using selenium
+11.Do you use double click method in Selenium a lot?
+12. Explain how you can handle frames using Selenium
+13. what is Listeners in Selenium WebDriver? It allows customizing TestNG reports or logs. There are two main listeners i.e. WebDriver Listeners and TestNG Listeners (edited)
+
+positive and negative test is important we need both of them
+
+* control - d
+
+* control - tab
+
+* If I download diffrent project from diffrent guys  i need to check jdk type at project structure
+
+
+NoSuchElementException
+StaleElementException
+ElementNotClickableException
+timeoutexception
+
+
+rally,jira -->> learn
+
+
+Xpath: "//ul/li[contains(text(),'doprep')]/preceding-sibling::li"
+
+        //h4[.='On-Campus Course']/following-sibling::div/a

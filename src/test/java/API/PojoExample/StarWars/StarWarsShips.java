@@ -1,6 +1,7 @@
 package API.PojoExample.StarWars;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -31,16 +32,25 @@ public class StarWarsShips {
         Assert.assertEquals(HttpStatus.SC_OK,httpResponse.getStatusLine().getStatusCode());
 
         ObjectMapper objectMapper=new ObjectMapper();
-        objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+
+        // If we don't want to define all properties we use this method  // jackson.databind.exc.UnrecognizedPropertyException:
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+
+        // If MGLT(All of them upper case cause of them java not give result) but we use this configure and reach solution
+        objectMapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES,true);
+
         // jackson.databind.exc.UnrecognizedPropertyException:
+       // objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
         ResponseBodyStarWars parsedObject=objectMapper.readValue(httpResponse.getEntity().getContent(), ResponseBodyStarWars.class);
 
         System.out.println(parsedObject.getCount());
+        System.out.println(parsedObject.getResults().get(0).getMGLT());
       //  System.out.println(parsedObject.getResults().get(0).getName());
          List<Results> res=parsedObject.getResults();
         for(Results ll:res){
-            System.out.println(ll.getModel());
+       //     System.out.println(ll.getModel());
+            System.out.println(ll.getMGLT());
         }
     }
 }

@@ -78,7 +78,7 @@ public class Serialization {
         HttpResponse httpResponse=httpClient.execute(httpPost);
 
         Assert.assertEquals(HttpStatus.SC_OK,httpResponse.getStatusLine().getStatusCode());
-    }
 
+    }
 
 }

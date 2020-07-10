@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features={"src\\test\\resources\\com.Etsy\\ScenarioOutlineEtsy.feature"}, //\com.duckduckgo\SearchBoxTest.feature
         glue="StepDefinitions", // it should be empty instead of StepDefinitions
         monochrome=false,
-        dryRun = false,
+        dryRun = true,
         tags = "@etsyOutline" // or @tech  ///    @etsy and @tt
         // @smoke and not @techtorial2
 )

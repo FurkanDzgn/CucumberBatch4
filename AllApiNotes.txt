@@ -1,0 +1,941 @@
+API  -->> Application Programing Interface,, client server relationship
+   * I learn API from swagger https://petstore.swagger.io/ // API generate the documentation(dom)
+
+ * It enables communication and data exchange between two seperate software systems/application/programs
+ * The best explanation of an API is that it allows two technologies to talk to one another
+ * HTTP  --> HyperText Transfer Protocol
+ * HTTPs --> HyperText Transfer Protocol Secure  -->> encrypted
+
+ -------
+
+ API -> Application Programing Interface
+
+ A technology that helps 2 application/program/software talk to each other/exchange information.
+
+ Application can be:
+ - website
+ - mobile application
+ - database
+ - server  -->> all the website, ....
+
+ Communication type is client/server.
+ Client - requests/asks for information/data
+ Server - respond/provide information/data
+
+ Think of API like a waiter in a restaurant,where client send an order(request) to a kitchen(server) via waiter(API). ,, fridge is a database
+
+
+ 3 layer of application:
+ - UI
+ - API
+ - DB(database)
+ --->>> if u know three types --> fullstack tester
+
+ -----
+
+ HTTP is the underlying protocol used by the World Wide Web and this protocol defines how messages are formatted and transmitted, and what actions Web servers and browsers should take in response to various commands
+
+-----
+
+http  - hyperText transfer protocol
+https - hyperText transfer protocol secured
+http/https protocols is the connection/data transfer type by world wide web.
+API uses http/https protocols to deliver data or perform data exchange.
+
+
+ftp - file transfer protocol
+
+- Browser is an another ide
+
+1. Transmission Control Protocol (TCP)
+2. Internet Protocol (IP)
+3. User Datagram Protocol (UDP)
+4. Post office Protocol (POP)
+5. Simple mail transport Protocol (SMTP)
+6. File Transfer Protocol (FTP)
+7. Hyper Text Transfer Protocol (HTTP)
+8. Hyper Text Transfer Protocol Secure (HTTPS)
+
+---------
+HTTP Methods:
+There are four different types of Http methods which basically tell the API what you are trying to do with your data.
+ -CRUD:
+   * Create
+   * Read
+   * Uptade
+   * Delete
+These are HTTP methods - request:
+Create  - Post (API method representation)
+Read    - GET (API method representation)
+Uptade  - PUT (API method representation)
+Delete  - DELETE (API method representation)
+
+Send POST requests to create a new record on the server(database)
+Send GET requests to retrieve information from server(database)
+Send PUT requests to uptade existing information on the server (database)
+Send DELETE requests to remove information on the server(database)
+Send OPTION request to get list of possible of all supported methods by API service
+
+Tools to execute API requests:
+   Manually:
+        - postman
+        - postwoman
+        - insomnia
+        - terminal/command promt(using 'curl' command)
+        - browser  -- >> just get
+   Via Java code:
+        - Apache HTTP client
+        - RestAssured library
+        - Uni Code
+
+Steps to exetute to API call/requests:
+0. Open/launch client (open POSTMAN)
+1. Specify the method type(GET/POST/PUT/DELETE)
+2. Specify the URL/URI  (URL == URI) -->> What is the difference between URL/URI? "search it for interview"
+                             -->>   For starters, URI stands for uniform resource identifier and URL stands for uniform resource locator. Most of
+                                    the confusion with these two is because they are related. You see, a URI can be a name, locator, or both for an online resource where a URL is just the locator. URLs are a subset of URIs.
+3. Execute (click on Send button)
+
+4. Check the response status code
+5. Check the response body
+
+REQUEST:
+  Client sends a requests for some information
+
+RESPONSE:
+  Server sends a response to a clients requests
+
+
+HTTP Status Codes:
+              Status code is an indicator(gosterge) of the client's request result.
+              Every API call that returns a response will have a status code.
+              Status code is part of RESPONSE.
+              The first thing we check is status code.
+
+        * 1XX - Informational
+        * 2XX - Success
+        * 3XX - Redirection
+        * 4XX - Client Error  -->> we don't need to create bug
+        * 5XX - Server Error
+
+    200 - Success
+    201 - Created
+    202 - Accepted
+    204 - No content
+
+    400 - Bad request
+    401 - Not authorized
+    404 - Not found
+    409 - Conflict
+    415 - Unsupported Media Type
+    429 - Too many request
+
+    502 - Bad Gateway
+    503 - Service Unavailable / Service not available
+    504 - Gateway Timeout
+
+    https://www.restapitutorial.com/httpstatuscodes.html  --->>> all HTTP status code
+
+
+Endpoint --> Endpoint is a URL you can access for different resources. -->> www.facebook.com -->> main URL
+             The endpoints indicate how you access the resource   -->> www.facebook.com//login ,  www.facebook.com/...
+
+Endpoint Structure:
+                 * Scheme/prothcol
+                 * Sub-domain
+                 * Top level domain
+                 * SUbdirectory/Path
+
+Endpoint = URL   //// Every endpoint is url but every url is not endpoint
+
+Endpoint Structure:
+  - protocol/scheme
+  - domain/host
+  - subdirectory/path
+
+  https://itunes.apple.com/search?term=linkinpark&limit=10
+  protocol / domain name   subdrictory/path   file name
+
+
+  curl.exe GET "https://itunes.apple.com/search?term=linkinpark&limit=1"  -->> Command Prompt,powershell
+  curl -X GET "https://itunes.apple.com/search?term=linkinpark&limit=1"   -->> Terminal
+
+  curl -API request execution
+
+  How do you learn API? answer -->>
+    SWAGGER - API documentation
+       - different endpoints
+       - expected status codes
+       - possible issues/error codes
+       - all features of API
+
+       https://petstore.swagger.io/#/pet/findPetsByStatus
+       - click get
+       - click Try It Out
+       - copy path
+       - copy at postman
+
+
+
+static testing
+      - review documentaion,......
+      * readind code without running
+dynamic testing
+      - run code
+
+navigate to website this get request
+
+dom(document object model) is part of def tool
+Application  -> network  -> see status code
+
+
+
+
+
+
+===================================================================================================
+
+API -- >> * ability to exchange two application,,,  request info-->> get info ,,, easinist,fast
+
+           * server --->>> API --->>> web app
+                   <<<---     <<<--- mobile app
+                                      tv app
+
+capthalong
+
+get:    get exist informationfrom server with API
+post    create
+put:    modifiying information that already exist
+delete: removing information that already exist
+
+
+get from regular browser,postman tool
+
+
+
+-->> Cookies: part of response and requests,, being store browser side
+
+--- You find a bug What is your next step?--->>Common Interview questions
+ * reproduceable a bug need be sure its a real bug
+ * be sure it's not a local machine bug
+
+===============================================================================
+Day-3
+
+Request Parameters :
+        - Header parameters
+        - Query string parameters
+        - Path parameters
+        - Request body parameters
+
+* Header -> is a metadata(data about data) about your request and response :  -->> some information , metadata -->>
+      - Authorization
+      - Content type(request-response type)
+   Header is not part of Url. Header is in a key-value format
+       ex:
+         - Content-Type=application/json
+         - Accept=application/json
+
+
+* Query string parameter - is part of URL  -->> some filter , data
+      - key-value format
+      - seperated from URL by ? mark
+      Query string parameter - will be ignored if it's invalid or broken, it will not affect the result
+         * location
+         * status
+         * ts
+         * gender
+         * it can be anything ......
+
+*Path parameter - comes after base url/domain/host
+     If invalid path parameter is used, it will break the url and it will effect the result
+
+      ex:
+
+  1.www.google.com/search
+    www.google.com  -> base URL
+   /search          -> path parameter
+
+  2.www.facebook.com/login
+  www.facebook.com -> base URL
+  /login           -> path parameter
+
+  www.techtorial.com/signUp/newStudent/online/payments?batch=6
+
+* Request body parameters:
+         Parameters included in the request body Usually submitted as JSON.
+
+         Usually at POST method
+
+
+      https://www.google.com 	-> base URL
+      /search 				-> path parameter
+      ?newwindow=1 			-> query paramter
+      &source=hp
+      &ei=MozvXoumI5W5tAbF0rTACw
+      &q=api+chaining&oq=api+chaining
+      &gs_lcp=CgZwc3ktYWIQAzICCAAyAggAMgIIADICCAAyBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46DggAEOoCELQCEJoBEOUCOgUIABCxAzoICAAQFhAKEB46BAgAEA06BggAEA0QHjoICAAQDRAFEB5QjjFYgUVghEdoBXAAeAGAAa0BiAGIDZIBBDUuMTCYAQCgAQGqAQdnd3Mtd2l6sAEG
+      &sclient=psy-ab
+      &ved=0ahUKEwiLh_unq5PqAhWVHM0KHUUpDbgQ4dUDCAk
+      &uact=5
+
+  *** query string param --> it is invalid it is not effect the result,,path parameter effect ***
+
+Find out how to create a new pet in Pet Store.
+
+* swagger is the documentation about API
+
+
+POST request:
+1. POST requst must have a request body parameter.
+
+
+
+curl -X POST
+curl.exe -X POST "https://petstore.swagger.io/v2/pet" -H "content-Type: application/json" -H " Accept: application/json" -d '{"id": 7892,"name": "spookie","status": "do not touch"}''
+
+curl -X GET
+
+ curl -terminal command
+ -X POST -> HTTP method
+ "https://petstore.swagger.io/v2/pet" -> endpoint
+ -H -> header
+ -d -> request body
+
+
+
+
+Difference between GET and POST request: -->> Interview question**
+- GET :
+     - retrieves(verileri geri cagirir) resource information
+     - doesn't have a request body
+     - no need to specify 'Content-Type' header
+     - specify 'Accept' header
+
+- POST :
+      - creates a resource
+      - requires to have a request body
+      - have to specify 'Content-Type' header
+      - specify 'Accept' header
+
+
+   POST--- >>> take info from swagger(documentation) -> copy -> click body-> click raw -> click header , param
+
+Headers:
+   - Content-type
+   - Accept
+
+Content-Type header - specifies what format of data we are sending in a request body. Who ever provides a body, should specify the Content-Type header.
+Accept header - specifies what response format we expect from server
+
+
+To send a API call:
+1. Open a client (POSTMAN, terminal)
+2. Specify the HTTP method (GET, POST)
+3. Specify URL/URI/endpoint
+4. Add query parameter( if needed)
+5. Add header parameters(content-type, accept)
+6. Add body parameter (for POST)
+7. Execute (click on Send button)
+
+
+Construct and execute 6 GET class to (create 6 java classes):
+https://itunes.apple.com/search?term=linkinpark
+
+====================================================================
+
+DAY-4
+
+API -->> API is an acronym for Application Programing Interface
+    * It enables communication and data exchange between two seperate software systems/ applications / program
+
+    postman -->> client
+    itunes  -->> server
+
+POST request requirements:
+    - POST method
+    - request body
+    - Content-Type header
+
+
+Request body and Response body:
+   - request body is part of request
+   - response body is part of response
+   - request body is specified by a client (client sends a request body)
+   - response body is specified by a server(servers sends a response body)
+
+
+
+https://reqres.in/
+
+UUID class in java
+
+06-23-2020
+Jun23 7:40:46:789
+Current time in milliseconds -->> TIMESTAMP  => 19778382
+System.currentTimeMillis();
+
+
+documentation -->> swagger
+
+What is the diffrence between PUT and POST request? -->> interview question.
+
+
+
+
+
+PUT request:
+   Uptades existing resources
+   - PUT request must have request body (same as POST)
+
+Differences between POST and PUT:
+- PUT -> uptade
+- POST create
+- if we try to create already existing resource with POST
+-> API call will fail with status code 409
+- with PUT request we uptade existing resource
+- if we try to uptade non-existing resources => it will act like POST (will create a new resource)
+
+Difference between PUT and PATCH? (Homework)
+    * PUT   -> general uptade
+    * PATCH -> specific uptade
+
+
+homework:
+    Using POST request create 25 unique dogs
+    Refactor CREATE/UPTADE user methods to use utility methods for payload
+    Automate GET single user, get all users endpoints
+    Try DELETE method.
+
+=========================================
+
+DAY -05
+
+JSON: (JavaScript Object Notation) -->> * Lightweight(hafif) data-interchange format
+                                        * Easy to read and write
+                                        * Can be used with most modern languages(Can be parsed easily with built-in and side libraries);
+                                        * Common language for exchanging information
+
+
+     GetRequestIntro.java
+     SmokeTestSuite.xml
+     HRMLogin.feature
+     pom.xml
+     apiIntro.subl(sublime)
+     petPayload.json
+
+
+JSON  Rules:
+1. .json extention
+2. key and value format
+3. key and value seperated by colon
+4. key and value pairs are seperated by comma
+5. key is always String
+
+Json supported data type:
+1. String (" ")
+2. Number(int, double, long)
+3. array([ ])
+4. boolean (true/false)
+5. json object ({ })
+6. null
+
+-------------------------------------
+{
+	"id": 007,
+	"name": "James",
+	"last_name": "Bond",
+	"car_model": "Aston Martin",
+	"passports_hold": [
+          "Kyrgyz" , "USA" , "UK", "Portugal", "Spain", "France", "Ukraine", "Turkey", "null"
+	],
+	"is_special_agend": true,
+	"marital_status": [
+           {
+             "id": 1,
+             "name": "Aigul",
+           },
+           {"id": 2,
+            "name": "Lyudmila"
+           },
+           {
+             "id": 3,
+             "name": "Gabriella"
+           },
+           {
+           "id": null,
+           "name": null
+           }
+	]
+}
+
+-------------------------------------
+{
+    "id": 7,
+    "name": "James",
+    "last_name": "Bond",
+    "car_model": "Aston Martin",
+    "passports_hold": [
+        "Kyrgyz",
+        "USA",
+        "UK",
+        "Portugal",
+        "Spain",
+        "France",
+        "Ukraine",
+        "Turkey",                       click beautify button
+        "null"
+    ],
+    "is_special_agend": true,
+    "marital_status": [
+        {
+            "id": 1,
+            "name": "Aigul"
+        },
+        {
+            "id": 2,
+            "name": "Lyudmila"
+        },
+        {
+            "id": 3,
+            "name": "Gabriella"
+        },
+        {
+            "id": null,
+            "name": null
+        }
+    ]
+}
+-----------------------------
+Nested JSON Objects:
+--------------------
+
+Map<String, String> map = new HashMap();
+Map<String, Integer> map = new HashMap();
+Map<Integer, String> map = new HashMap();
+Map<Integer, Integer> map = new HashMap();
+Map<String, Object> map = new HashMap();
+Map<> map = new HashMap(); => initialize object towards interface
+HashMap<> map = new HashMap();  => 10 methods
+Map<> map = new HashMap();		=> 30 methods
+ArrayList list = new ArrayList();
+
+
+Deserialization - process of converting json format into java data types.
+Serialization - process of converting java format types into json format.
+
+
+
+Deserialize response from https://api.chucknorris.io/jokes/random
+and print out the joke(value)
+
+Deserialize response from http://tronalddump.io/random/quote
+and print out the "value" and links.self.href
+
+Extra(if you feel bored):
+https://api.got.show/api/map/characters
+
+
+====================================================================
+
+Deserialization == parse
+
+Json data types can be converted in Java data types as:
+    - Json String ""    -> Java: String
+    - Json Number       -> Java: int,double,float,long,byte
+    - Json boolean      -> Java: true/false
+    - Json array []     -> Java: Array[], ArrayList, List
+    - Json null         -> Java: null
+    - Json Object {}    -> Java: Object
+
+Key - value format in Json -> Java: Map
+
+      {
+            "_id": "599f87db9a11040c4a16343f",
+            "text": "The goddess of love, beauty, and fertility in Norse mythology, Freyja was the first cat lady. She is depicted in stories as riding a chariot that was drawn by cats.",
+            "type": "cat",
+            "user": {
+                "_id": "5a9ac18c7478810ea6c06381",
+                "name": {
+                    "first": "Alex",
+                    "last": "Wohlbruck"
+           }    -> Map<String,String>
+
+
+
+
+
+{
+    "all": [
+        {
+            "_id": "599f87db9a11040c4a16343f",
+            "text": "The goddess of love, beauty, and fertility in Norse mythology, Freyja was the first cat lady. She is depicted in stories as riding a chariot that was drawn by cats.",
+            "type": "cat",
+            "user": {
+                "_id": "5a9ac18c7478810ea6c06381",
+                "name": {
+                    "first": "Alex",
+                    "last": "Wohlbruck"
+                }
+            },
+            "upvotes": 6,
+            "userUpvoted": null
+        }
+  }
+]
+
+Map<String,List<Map<String,Object>>>
+
+
+========
+
+<Map<String,List<Map<String,Map<String,List<Map<String,List<Map<String,String>>>>>
+
+{
+  "key":[
+  {
+   "key2":{
+     "keyy3":[
+        {
+        "key4":[
+        {
+          "key5":"value",
+          }
+        }
+        ]
+        }
+     ]
+   }
+  }
+  ]
+}
+
+====
+
+Response from cat facts can be parsed as:
+<Map<String, List<Map<String, Object>>>
+
+
+
+
+
+
+
+
+============================
+
+POST
+
+https://slack.com/api/chat.postMessage
+Content-Type -> application/json
+Authorization -> Bearer xoxb-941125893829-1209222336674-ME8ZoaxUnsymEwiQLGxowKe4
+                 Bearer xoxb-941125893829-1209222336674-V71HpFW2Xr33KoX1tBuZecRV
+{
+  "channel": "C0164SXRETU",
+  "text": "Second message"
+}
+
+GET
+
+https://slack.com/api/conversations.history?channel=C0164SXRETU
+
+channel -> C0164SXRETU
+Accept -> application/json
+Authorization -> Bearer xoxb-941125893829-1209222336674-ME8ZoaxUnsymEwiQLGxowKe4
+
+DELETE
+
+https://slack.com/api/chat.delete?channel=C0164SXRETU&ts=1593291409.019700
+
+channel -> C0164SXRETU
+ts -> 1593291587.020300
+
+Authorization -> Bearer xoxb-941125893829-1209222336674-ME8ZoaxUnsymEwiQLGxowKe4
+
+
+
+Get method:                https://slack.com/api/conversations.history?channel=C0164SXRETU
+Post method:               https://slack.com/api/chat.postMessage
+Get list of all messages:  https://slack.com/api/conversations.history?channel=C0164SXRETU
+To delete:                 https://slack.com/api/chat.delete?channel=C0164SXRETU&ts=1593291409.019700
+=======
+
+
+Print out every key's value 1 by 1:
+   https://api.got.show/api/map/characters/byId/5cc0743504e71a0010b852d9
+
+Print out every key value from first message:
+   https://slack.com/api/conversations.history?channel=C0164SXRETU
+
+===============================================================================================
+
+SDLC
+SBM
+
+Which language do developers use?
+  HTML + CSS + JavaScript= Front end developer(Angular JS)
+  Java + SpringBoot framework= Backend developer
+  Full Stack Developer
+
+arSpek -->> cucumber+ CSharp
+
+spekflow
+
+Machito -> Unit Test -> Testing development for developers
+
+Cucumber is not for TestNG
+
+cucumber+JUnit / cucumber+TestNG / JUnit / TestNG
+
+* Every test case in you test suite must be indepenedant from other test case. The test must be de-coupled.
+
+
+
+Ways of deserialization
+ - TypeReference
+ - POJO (Plain Old Java Object)
+
+
+When user sends a POST request to create a pet
+Then the status code is 200
+And the pet is created
+
+When user creates a pet with id, name, status
+Then the status code is 200
+And pet with id, name, status is created
+
+==============================================================================
+
+1. Update the feature file to have parameterized steps.(id, name, status)
+
+2.
+Using Selenium Webdriver navigate to amazon.com
+Print out all links from amazon.com
+Print out only working links from amazon.com
+
+1.
+Send message to slack via POST request
+Verify the message via GET request
+
+2.
+Send message to slack via POST request
+Verify the message with Selenium Webdriver in UI
+
+3.
+Send message to slack with Selenium Webdriver in UI
+Vefify the message with Selenium Webdriver in UI
+
+4.
+Send message to slack with Selenium Webdriver in UI
+Verify the message via GET request
+
+5.
+Delete message from slack via POST request
+Verify the message is gone via GET request
+
+6.
+Delete message from slack via POST request
+Verify the message is gone via Selenium Webdriver in UI
+
+====================================================================
+
+Deserialization:
+- TypeReference class
+- Pojo
+
+
+Homework:
+
+GET https://swapi.dev/api/starships
+Deserialize response using POJO classes
+
+GET http://rates.akchabar.kg/get.json
+Deserialize response using POJO classes
+
+Convert all other APIs we have used to deserialize with POJO classes.
+
+------------------
+
+http://jsonviewer.stack.hu/ -->> Json viewer
+
+------------------
+
+ET https://breakingbadapi.com/api/characters
+Deserialize response using POJO classes
+GET Alive, Deceased and Presumed dead characters' names (1 Map with ONLY 3 keys: Alive, Deceased, Presumed dead)
+GET https://breakingbadapi.com/api/characters/12
+Deserialize response using POJO class
+Print out: "NameOfChar" is "STATUS", portrayed: "value", in "category"
+
+
+
+Jira -->> basically jira is board
+   4 status of the user story:
+       1. To Do
+       2. In Progress
+       3. To Verify/In test
+       4. Done
+
+Rally is alternative of Jira
+
+
+
+ -->> Original Estimate -> fibanacci Sequence
+
+
+GET https://api.got.show/api/map/characters
+Deserialize using POJO class
+Count number of Male and Female characters in every house
+
+GET https://api.got.show/api/map/characters
+Deserialize using POJO class
+Count number of characters who appeared in the same books
+
+GET https://breakingbadapi.com/api/characters/{id}
+Deserialize response using POJO class
+Please make id randomly generated, so every run you get a new character.
+
+GET https://swapi.dev/api/species
+Deserialize response using POJO class
+Filter all species by classification. ex: mammal -> Human, Yoda's species etc...
+
+------JIRA-----
+
+http://localhost:8080/rest/api/2/issue
+
+To get authorization cookie:
+http://localhost:8080/rest/auth/1/session
+
+1. to create a story/bug in Jira in back-end: POST http://localhost:8080/rest/api/2/issue
+2. to authenticate ourselves we use cookie based authentication:
+       - Cookie -> header
+       - JSESSION cookie value
+
+
+Homework
+Using BDD style:
+
+1. Create a 5 stories via API(using HttpClient)
+  Verify 5 Stories in UI (using selenium Webdriver)
+     - id
+      - summary
+      - description
+
+2. Create a 5 bugs via API
+   Verify 5 bugs in UI
+      - id
+      - summary
+      - description
+
+Jira Documentation
+
+POST:
+   http://localhost:8080/rest/auth/1/session
+   Headers:
+     Accept         application/json
+     Content-Type   application/json
+  Request Body:
+     {
+    "username":"furkan.duzgun",
+    "password":"VwMGkY2#cD6Xdct"
+    }
+
+POST:
+   http://localhost:8080/rest/api/2/issue
+   Headers:
+     Accept         application/json
+     Content-Type   application/json
+     Cookie      JSESSIONID=6611F746C0C61EB10709BDA5E71AD541 -->> It is coming from up response body
+   Request Body:
+   {
+    "fields":{
+        "project":{
+            "key":"TEC"
+        },
+        "summary":"Creating a bug from API",
+        "description":"Story created throuh API",
+        "issuetype":{
+            "name":"Bug"
+        }
+    }
+}
+
+====
+{
+    "username":"furkan.duzgun",
+    "password":"VwMGkY2#cD6Xdct"
+}
+
+Jira:
+
+   Click settings avatar -> Click userManagment -> Create new User
+
+=============
+
+?maxResults=2 -> happy path
+
+=============
+
+
+Deserialization with Apache Http client:
+  - readValue():
+        - new TypeReference
+        - POJO
+  - readTree()
+        - JsonNode
+
+API Testing;
+automation:
+    - Apache Http Client
+    - RestAssured
+    - more more more ....
+manual:
+    - Postman
+    - Postwoman
+    - Insomnia
+    - curl
+    - Google advance client
+    - Paw
+    - Kibana
+    - Browser (Get only)
+
+-----
+RESTAssured
+    was desingned to simplify
+    * DDF -->>  given() - when() -then data driven format
+
+Why RestAssured?
+  RestAssured wrapped all the implementation, and provided the reusable, user friendly methods in BDD style
+      given() -> precondition
+      when()  -> action
+      then()  -> verification
+
+
+using Http client:
+GET http://localhost:8080/rest/api/2/search?jql=assignee=updateName
+verify in ui, that you have exactly same number of stories assigned to the user.
+
+using RestAssured:
+GET https://api.got.show/api/map/characters
+get all houses and ids and store them in a map
+
+given():
+    - request headers
+    - request params
+    - request cookies
+    - request body
+
+ when():
+     - get()
+     - post()
+     - put()
+     - delete()
+     - head()
+     - options()
+     - patch()
+
+ then():
+     - verifications/assertions
+
+ and():
+     - that just connects to logics
