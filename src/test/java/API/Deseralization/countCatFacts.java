@@ -47,6 +47,13 @@ public class countCatFacts {
         System.out.println(parsedResponse.get("all").size());
 
 
+        List<Map<String,Object>> user = (List<Map<String, Object>>) parsedResponse.get("all");
+
+        Map<String,Map<String,Object>> first = (Map<String, Map<String, Object>>) user.get(0).get("user");
+        System.out.println(first.get("name").get("first"));
+
+
+
 
     }
 

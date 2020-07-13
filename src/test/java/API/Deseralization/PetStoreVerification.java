@@ -41,6 +41,7 @@ public class PetStoreVerification {
         int num=17789;
         String name="Kumar";
         String status="available";
+
         System.out.println("Building request body");
         HttpEntity httpEntity=new StringEntity(PayloadUtils.getPetPayload(num,name,status));
         httpPost.setEntity(httpEntity);

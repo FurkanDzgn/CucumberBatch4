@@ -1,5 +1,6 @@
 package API;
 
+import io.cucumber.java.bs.A;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
@@ -108,6 +109,22 @@ public class GETRequestIntro {
         System.out.println(response.getStatusLine().getReasonPhrase());
 
         System.out.println(response.getEntity().getContentType().getValue());
+
+    }
+
+    @Test
+    public void exercise() throws URISyntaxException, IOException {
+        HttpClient httpClient=HttpClientBuilder.create().build();
+        URIBuilder uriBuilder=new URIBuilder();
+        uriBuilder.setScheme("https").setHost("petstore.swagger.io").setPath("v2/pet/1");
+
+        HttpGet httpGet=new HttpGet(uriBuilder.build());
+        httpGet.setHeader("Accept","application/json");
+
+        HttpResponse httpResponse=httpClient.execute(httpGet);
+
+        Assert.assertEquals(HttpStatus.SC_OK,httpResponse.getStatusLine().getStatusCode());
+        Assert.assertEquals("application/json",httpResponse.getEntity().getContentType().getValue());
 
     }
 

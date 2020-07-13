@@ -17,8 +17,12 @@ public class RestAssuredIntro {
 
         // https://swapi.dev/api/planets/1
 
-        given().header("contentType",ContentType.JSON).header("accept",ContentType.JSON)
-                .when().get("https://swapi.dev/api/planets/1").then().statusCode(200).and().contentType(ContentType.JSON);
+//        given().header("contentType",ContentType.JSON).header("accept",ContentType.JSON)
+//                .when().get("https://swapi.dev/api/planets/1").then().statusCode(200).and().contentType(ContentType.JSON);
+
+        given().header("accept",ContentType.JSON)
+                .when().get("https://swapi.dev/api/planets/1")
+                .then().assertThat().statusCode(200).and().contentType(ContentType.JSON);
 
 
     }
@@ -42,6 +46,13 @@ public class RestAssuredIntro {
 //                .then().log().ifStatusCodeIsEqualTo(200).assertThat().statusCode(200).contentType(ContentType.JSON)
 //                .and().body("results[0].gravity", Matchers.is("1 standard"))
 //                .and().body("results[0].terrain",Matchers.isA(String.class));
+    }
+
+    @Test
+    public void rest4(){
+        given().header("accept",ContentType.JSON).when().get("https://swapi.dev/api/planets")
+                .then().log().ifStatusCodeIsEqualTo(201).statusCode(200).and().contentType(ContentType.JSON)
+                .and().body("results[1].residents[2]",Matchers.is("http://swapi.dev/api/people/81/"));
     }
 
 

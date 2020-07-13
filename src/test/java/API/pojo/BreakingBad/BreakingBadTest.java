@@ -97,6 +97,9 @@ public class BreakingBadTest {
         System.out.println("List of presume Dead characters"+charBycategory.get(PRESUMED_DEAD)+"\n");
         System.out.println("List of unknown_status characters"+charBycategory.get(UNKOWN)+"\n");
 
-
     }
+
+
+
+
 }

@@ -64,4 +64,64 @@ public class StarWarsDeseralization {
 
 
     }
+
+    @Test
+    public void getPlanets2() throws URISyntaxException, IOException {
+
+        HttpClient httpClient=HttpClientBuilder.create().build();
+        URIBuilder uriBuilder=new URIBuilder();
+        uriBuilder.setScheme("https").setHost("swapi.dev").setPath("api/planets");
+
+        HttpGet httpGet=new HttpGet(uriBuilder.build());
+
+        httpGet.setHeader("Accept","application/json");
+
+        HttpResponse httpResponse=httpClient.execute(httpGet);
+
+        if(httpResponse.getStatusLine().getStatusCode()!=HttpStatus.SC_OK){
+            Assert.fail();
+        }
+        ObjectMapper objectMapper=new ObjectMapper();
+
+        Map<String,Object> parsedResponse=objectMapper.readValue(httpResponse.getEntity().getContent(),
+                new TypeReference<Map<String, Object>>() {});
+
+       List<Map<String,Object>> results = (List<Map<String, Object>>) parsedResponse.get("results");
+     List<String> films = (List<String>) results.get(0).get("films");
+
+   //     System.out.println(films.get(0));
+
+        for(Map<String,Object> result:results){
+            List<String> fil = (List<String>) result.get("films");
+            System.out.println(fil.get(0));
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

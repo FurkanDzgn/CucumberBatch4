@@ -10,6 +10,13 @@ public class PetPojo {
     private List<String> tags;
     private String status;
 
+    public PetPojo(String name,String status, int id){
+        this.id=id;
+        this.name=name;
+        this.status=status;
+
+    }
+
     public int getId() {
         return id;
     }

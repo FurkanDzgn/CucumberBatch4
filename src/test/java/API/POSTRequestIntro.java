@@ -55,7 +55,6 @@ public class POSTRequestIntro {
                 "    \"name\": \"morpheus\",\n" +
                 "    \"job\": \"leader\"\n" +
                 "}");
-
         httpPost.setEntity(entityBuilder);
 
         HttpResponse response=httpClient.execute(httpPost);
