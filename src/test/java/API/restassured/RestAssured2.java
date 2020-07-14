@@ -11,10 +11,18 @@ public class RestAssured2 {
 
     @Test
     public void getRequest1(){
-       given().header("accept", ContentType.JSON).when().get("https://breakingbadapi.com/api/characters/50")
-               .then().log().ifValidationFails().assertThat().statusCode(200).and().contentType(ContentType.JSON)
-               .body("[0].name", Matchers.equalToIgnoringCase("Juan Bolsa"))
-               .and().body("[0].occupation",Matchers.hasSize(1));
+//       given().header("accept", ContentType.JSON).when().get("https://breakingbadapi.com/api/characters/50")
+//               .then().log().ifValidationFails().assertThat().statusCode(200).and().contentType(ContentType.JSON)
+//               .body("[0].name", Matchers.equalToIgnoringCase("Juan Bolsa"))
+//               .and().body("[0].occupation",Matchers.hasSize(1));
+
+
+       given().header("accept",ContentType.JSON)
+               .when().get("https://breakingbadapi.com/api/characters/50")
+               .then().assertThat().statusCode(200).contentType(ContentType.JSON)
+               .log().all()
+               .body("[0].occupation[0]",Matchers.is("Mexican drug cartel boss"));
+
     }
 
     @Test

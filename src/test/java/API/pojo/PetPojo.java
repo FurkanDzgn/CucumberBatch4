@@ -14,7 +14,6 @@ public class PetPojo {
         this.id=id;
         this.name=name;
         this.status=status;
-
     }
 
     public int getId() {

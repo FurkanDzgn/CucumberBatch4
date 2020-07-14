@@ -24,7 +24,6 @@ public class RestAssuredIntro {
                 .when().get("https://swapi.dev/api/planets/1")
                 .then().assertThat().statusCode(200).and().contentType(ContentType.JSON);
 
-
     }
 
     @Test
