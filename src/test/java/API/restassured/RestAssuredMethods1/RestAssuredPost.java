@@ -1,6 +1,7 @@
 package API.restassured.RestAssuredMethods1;
 
 import API.pojo.PetPojo;
+import API.pojo.PetPojoRequest;
 import Utils.PayloadUtils;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -32,10 +33,14 @@ public class RestAssuredPost {
         RestAssured.baseURI = "https://petstore.swagger.io";
         RestAssured.basePath = "v2/pet";
 
+//        RestAssured.requestSpecification = new RequestSpecBuilder()
+//                .setAccept(ContentType.JSON).setContentType(ContentType.JSON).build();
         requestSpecification = new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
                 .setAccept(ContentType.JSON).build();
 
+//        RestAssured.responseSpecification = new ResponseSpecBuilder()
+//                .expectContentType(ContentType.JSON).expectStatusCode(200).build();
         responseSpecification = new ResponseSpecBuilder().log(LogDetail.ALL)
                 .expectStatusCode(200)
                 .expectContentType(ContentType.JSON).build();
@@ -50,11 +55,11 @@ public class RestAssuredPost {
         File petPayloadFile = new File("target/pet.json");
         given().spec(requestSpecification)
                 .body(petPayloadFile)
-                .when().post()
+                .when().post() // "https://petstore.swagger.io/v2/pet"
                 .then().spec(responseSpecification)
                 .body(NAME, Matchers.equalTo("Hatiko"))
-                .and().body(STATUS,Matchers.is("waiting"));
-//                .and().body("id",Matchers.equalTo(1));
+                .and().body(STATUS,Matchers.is("waiting"))
+                .and().body("id",Matchers.equalTo(45345));
 
 
     }
@@ -62,7 +67,7 @@ public class RestAssuredPost {
     @Test
     public void createPet2(){
 
-        PetPojo petPojo = new PetPojo("hatiko","gone",101);
+        PetPojoRequest petPojo = new PetPojoRequest("hatiko","gone",101);
 
         given().spec(requestSpecification)
                 .body(petPojo)

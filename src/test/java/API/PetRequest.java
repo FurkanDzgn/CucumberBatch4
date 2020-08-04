@@ -41,7 +41,7 @@ public class PetRequest {
         PetPojo deserializedObject=objectMapper.readValue(httpResponse.getEntity().getContent(), PetPojo.class);
 
         System.out.println(deserializedObject.getId());
-        System.out.println(deserializedObject.getName());
+        System.out.println(deserializedObject.getCategory().get("name"));
     }
 
 

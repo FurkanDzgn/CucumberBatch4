@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src\\test\\resources\\com.herokuapp\\DocString.feature",
+        features = "src\\test\\resources\\com.WebOrder\\NewOrderOutline.feature",
         glue = "StepDefinitions",
         dryRun = false
 )

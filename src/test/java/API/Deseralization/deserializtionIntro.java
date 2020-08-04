@@ -2,6 +2,7 @@ package API.Deseralization;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import javafx.beans.binding.ObjectExpression;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -15,6 +16,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLOutput;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
@@ -87,6 +89,55 @@ public class deserializtionIntro {
         System.out.println(ad.get("company"));
         System.out.println(ad.get("url"));
         System.out.println(ad.get("text"));
+    }
+
+
+
+    @Test
+    public void tryIt() throws IOException, URISyntaxException {
+
+
+        HttpClient httpClient = HttpClientBuilder.create().build();
+        URIBuilder uriBuilder = new URIBuilder();
+        uriBuilder.setScheme("https").setHost("petstore.swagger.io").setPath("v2/pet/12");
+
+        HttpGet httpGet=new HttpGet(uriBuilder.build());
+        httpGet.setHeader("Accept","application/json");
+
+        HttpResponse httpResponse = httpClient.execute(httpGet);
+
+        if(httpResponse.getStatusLine().getStatusCode()!=200){
+            Assert.fail();
+        }
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        Map<String,Object> parsedObject = objectMapper.readValue(httpResponse.getEntity().getContent(),
+                new TypeReference<Map<String, Object>>() {});
+
+        System.out.println(parsedObject.get("id"));
+
+        List<Map<String,Object>> tags = (List<Map<String, Object>>) parsedObject.get("tags");
+
+        System.out.println(tags.get(0).get("id"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 }

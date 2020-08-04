@@ -34,7 +34,8 @@ public class RestAssuredDeserialization3 {
 //
 //        RestAssured.requestSpecification = new RequestSpecBuilder().setAccept(ContentType.JSON).build();
 //        RestAssured.responseSpecification = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-//        response = given().spec(requestSpecification).when().get().then().spec(responseSpecification).extract().response();
+//        response = given().spec(requestSpecification).when().get()
+//        .then().spec(responseSpecification).extract().response();
 //    }
 //
 //    @Test

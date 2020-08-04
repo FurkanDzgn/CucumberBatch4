@@ -14,6 +14,7 @@ Feature: scenario outline Test
       | winter hat     | Winter hat \| Etsy     | winter  |
       | hat            | Hat \| Etsy            | hat     |
       | winter soldier | Winter soldier \| Etsy | soldier |
+  
 
     # to organize your code in intellij you need to use option+command+l  --> mac
                                                     #   ctrl+alt+l  --> windows

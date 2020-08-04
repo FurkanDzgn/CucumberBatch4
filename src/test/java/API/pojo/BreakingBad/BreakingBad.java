@@ -21,7 +21,7 @@ public class BreakingBad {
         return occupation;
     }
 
-    public void setOccupation(List<String> occupation) {
+    public void setOccupation(List<String> occupation)  {
         this.occupation = occupation;
     }
 

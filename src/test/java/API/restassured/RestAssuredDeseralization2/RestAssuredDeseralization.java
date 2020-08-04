@@ -24,12 +24,12 @@ public class RestAssuredDeseralization {
         RestAssured.baseURI="https://breakingbadapi.com";
         RestAssured.basePath="/api/characters";
 
-//        RestAssured.requestSpecification = new RequestSpecBuilder().setAccept(ContentType.JSON).build();
-//        RestAssured.responseSpecification = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-//        response = given().spec(requestSpecification)
-//                .when().get("50")
-//                .then().spec(responseSpecification)
-//                .extract().response();
+        RestAssured.requestSpecification = new RequestSpecBuilder().setAccept(ContentType.JSON).build();
+        RestAssured.responseSpecification = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+        response = given().spec(requestSpecification)
+                .when().get("50")
+                .then().spec(responseSpecification)
+                .extract().response();
     }
 
     @Test

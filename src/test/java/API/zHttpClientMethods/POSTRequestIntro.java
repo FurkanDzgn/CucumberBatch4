@@ -1,4 +1,4 @@
-package API.HttpClientMethods;
+package API.zHttpClientMethods;
 
 import Utils.PayloadUtils;
 import org.apache.http.HttpEntity;
@@ -13,7 +13,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 
 import static Utils.PayloadUtils.getPetPayload;
@@ -91,4 +90,52 @@ public class POSTRequestIntro {
         Assert.assertEquals(HttpStatus.SC_OK,httpResponse.getStatusLine().getStatusCode());
 
     }
+
+
+    @Test
+    public void tryIt() throws URISyntaxException, IOException {
+        // https://petstore.swagger.io/v2/pet
+        HttpClient httpClient = HttpClientBuilder.create().build();
+        URIBuilder uriBuilder = new URIBuilder();
+        uriBuilder.setScheme("https").setHost("petstore.swagger.io").setPath("v2/pet");
+
+        HttpPost httpPost = new HttpPost(uriBuilder.build());
+        httpPost.setHeader("Accept","application/json");
+        httpPost.setHeader("Content-Type","application/json");
+
+        HttpEntity httpEntity = new StringEntity(PayloadUtils.getPetPayload(5668,"Hatiko","waiting"));
+        httpPost.setEntity(httpEntity);
+
+        HttpResponse httpResponse = httpClient.execute(httpPost);
+
+        Assert.assertEquals(HttpStatus.SC_OK,httpResponse.getStatusLine().getStatusCode());
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

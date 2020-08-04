@@ -99,6 +99,29 @@ public class BreakingBadTest {
 
     }
 
+    @Test
+    public void tryIt() throws IOException, URISyntaxException {
+
+        HttpClient httpClient= HttpClientBuilder.create().build();
+        URIBuilder uriBuilder=new URIBuilder();
+        uriBuilder.setScheme("https").setHost("breakingbadapi.com").setPath("api/characters");
+
+        HttpGet httpGet=new HttpGet(uriBuilder.build());
+
+        httpGet.setHeader("Accept","application/json");
+
+        HttpResponse httpResponse=httpClient.execute(httpGet);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        List<Map<String,Object>> parsedObject = objectMapper.readValue(httpResponse.getEntity().getContent()
+                , new TypeReference<List<Map<String, Object>>>() {});
+
+        System.out.println(parsedObject.get(0).get("name"));
+
+
+    }
+
 
 
 

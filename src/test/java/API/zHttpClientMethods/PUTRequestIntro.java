@@ -1,4 +1,4 @@
-package API.HttpClientMethods;
+package API.zHttpClientMethods;
 
 import Utils.PayloadUtils;
 import org.apache.http.HttpEntity;
@@ -13,7 +13,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 
 public class PUTRequestIntro {

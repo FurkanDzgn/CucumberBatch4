@@ -28,8 +28,10 @@ public class RestAssuredAdvanced {
         RestAssured.baseURI = "http://api.football-data.org";
         RestAssured.basePath = "v2/competitions/";
 
+
          requestSpecification = new RequestSpecBuilder().setAccept(ContentType.JSON).build();
-         responseSpecification = new ResponseSpecBuilder().expectContentType(ContentType.JSON).expectStatusCode(200).build();
+         responseSpecification = new ResponseSpecBuilder().expectContentType(ContentType.JSON)
+                 .expectStatusCode(200).build();
          response =given().spec(requestSpecification).when().get().then().spec(responseSpecification)
                 .extract().response();
     }
@@ -63,7 +65,6 @@ public class RestAssuredAdvanced {
             int id = (int) competitions.get(i).get("id");
             if(id >= 2100){
                 System.out.println(competitions.get(i).get("name"));
-
             }
         }
     }

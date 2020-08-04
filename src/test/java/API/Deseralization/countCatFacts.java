@@ -52,9 +52,6 @@ public class countCatFacts {
         Map<String,Map<String,Object>> first = (Map<String, Map<String, Object>>) user.get(0).get("user");
         System.out.println(first.get("name").get("first"));
 
-
-
-
     }
 
     @Test

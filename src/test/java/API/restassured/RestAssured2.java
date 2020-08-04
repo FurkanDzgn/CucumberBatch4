@@ -37,7 +37,8 @@ public class RestAssured2 {
         //       .body("[0].portrayed",Matchers.is("Javier Grajeda"));
         // body("[0].appearance",Matchers.hasSize(2)).and()
 
-        given().header("accept",ContentType.JSON).when().get("https://breakingbadapi.com/api/characters/50")
+        given().header("accept",ContentType.JSON)
+                .when().get("https://breakingbadapi.com/api/characters/50")
                 .then().log().all().assertThat().statusCode(200).and().contentType(ContentType.JSON)
                 .and().rootPath("[0]")
                 .body("status",Matchers.is("Deceased"))

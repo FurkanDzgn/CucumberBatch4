@@ -29,8 +29,10 @@ public class GOT {
         //        .when().get("https://swapi.dev/api/planets/1").then().statusCode(200).and().contentType(ContentType.JSON);
 
        Map<String,Object> responseBody= given().header("accept", ContentType.JSON)
-                .when().get("https://api.got.show/api/map/characters").getBody().as(new TypeRef<Map<String, Object>>() {
+                .when().get("https://api.got.show/api/map/characters")
+               .getBody().as(new TypeRef<Map<String, Object>>() {
                });
+
         List<Map<String,Object>> data= (List<Map<String, Object>>) responseBody.get("data");
 
         Map<String,String> map=new LinkedHashMap<>();

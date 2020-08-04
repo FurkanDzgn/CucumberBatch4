@@ -1,6 +1,5 @@
-package API.HttpClientMethods;
+package API.zHttpClientMethods;
 
-import io.cucumber.java.bs.A;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
@@ -12,7 +11,6 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.Arrays;
 
 public class GETRequestIntro {
 
@@ -39,6 +37,7 @@ public class GETRequestIntro {
         uriBuilder.setScheme("https");
         uriBuilder.setHost("petstore.swagger.io");
         uriBuilder.setPath("v2/pet/7891");
+
 
         // Specify the HTTP method (GET, POST)
         HttpGet get =new HttpGet(uriBuilder.build());  // we declaered
@@ -128,28 +127,45 @@ public class GETRequestIntro {
 
     }
 
+    @Test
+    public void tryIt() throws URISyntaxException, IOException {
+
+
+        // https://petstore.swagger.io/v2/pet/{petID}
+
+        HttpClient httpClient = HttpClientBuilder.create().build();
+
+        URIBuilder uriBuilder = new URIBuilder();
+        uriBuilder.setScheme("https").setHost("petstore.swagger.io").setPath("v2/pet/5668");
+
+        HttpGet httpGet = new HttpGet(uriBuilder.build());
+        httpGet.setHeader("accept","application/json");
+
+        HttpResponse httpResponse = httpClient.execute(httpGet);
+
+        Assert.assertEquals(HttpStatus.SC_OK,httpResponse.getStatusLine().getStatusCode());
 
 
 
+    }
 
+    @Test
+    public void addf() throws URISyntaxException, IOException {
 
+        HttpClient httpClient = HttpClientBuilder.create().build();
 
+        URIBuilder uriBuilder = new URIBuilder();
+        uriBuilder.setScheme("https").setHost("petstore.swagger.io").setPath("v2/pet/1");
 
+        HttpGet httpGet = new HttpGet(uriBuilder.build());
 
+        httpGet.setHeader("Accept","application/json");
 
+        HttpResponse httpResponse = httpClient.execute(httpGet);
 
+        Assert.assertEquals(200,httpResponse.getStatusLine().getStatusCode());
+        Assert.assertEquals("application/json",httpResponse.getEntity().getContentType().getValue());
 
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 }

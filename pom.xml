@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <target.version>1.8</target.version>
+        <source.version>1.8</source.version>
     </properties>
 
     <dependencies>
@@ -92,6 +92,8 @@
 
     </dependencies>
 
+
+
 <!--we use this plugin for First plugin run my code  -->
     <build>
         <plugins>
@@ -125,8 +127,24 @@
                     </execution>
                 </executions>
             </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${source.version}</source>
+                    <target>${target.version}</target>
+                </configuration>
+            </plugin>
         </plugins>
+
     </build>
+
+
+
+
 
 
 </project>

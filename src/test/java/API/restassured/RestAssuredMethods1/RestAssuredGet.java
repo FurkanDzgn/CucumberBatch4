@@ -33,9 +33,13 @@ public class RestAssuredGet {
 
     @Test
     public void getPet(){
-        given().accept(ContentType.JSON)
+//        given().accept(ContentType.JSON)
+//                .when().get("45345")
+//                .then().contentType(ContentType.JSON).statusCode(200);
+
+        given().spec(requestSpecification)
                 .when().get("45345")
-                .then().contentType(ContentType.JSON).statusCode(200);
+                .then().spec(responseSpecification).log().body();
     }
 
     @Test

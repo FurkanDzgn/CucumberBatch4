@@ -5,6 +5,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Before;
@@ -95,6 +96,25 @@ public class RestAssuredAdvanced1 {
     public void adv7(){
         response.then().body("scorers.collect {it.team.name}",Matchers.hasItem("Turkey"));
         response.then().body("scorers.collect {it.team.name}",Matchers.hasItems("England","Portugal"));
+        response.then().body("count",Matchers.is(10));
+        response.then().body("competition.area.name ",Matchers.is("World"));
+        String name = response.path("competition.area.name");
+        System.out.println(name);
+    }
+
+    @Test
+    public void adv8(){
+
+       String name = response.path("scorers.find {it.player.id == 8004}.player.name");
+       Assert.assertEquals(name,"Harry Kane");
+       response.then().assertThat().body("scorers.find {it.player.nationality == 'Portugal'}.player.id",Matchers.is(44));
+
+       List<String> names = response.path("scorers.findAll {it.player.position == 'Attacker'}.player.name");
+       System.out.println(names);
+
+        List<String> str = response.path("scorers.collect {it.player.name}");
+        System.out.println(str);
+
     }
 
 }
