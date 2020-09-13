@@ -13,7 +13,21 @@
         <source.version>1.8</source.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>oracle</id>
+            <url>http://www.datanucleu s.org/downloads/maven2/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
+       <!-- go to the up website and download inside m2 file one time-->
+        <dependency>
+            <groupId>oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -89,6 +103,13 @@
             <scope>provided</scope>
         </dependency> <!-- specify getter, setter, constructor ,...-->
 
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+
 
     </dependencies>
 
@@ -141,10 +162,6 @@
         </plugins>
 
     </build>
-
-
-
-
 
 
 </project>

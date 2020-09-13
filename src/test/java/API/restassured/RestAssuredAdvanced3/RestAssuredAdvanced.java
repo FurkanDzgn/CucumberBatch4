@@ -19,20 +19,35 @@ import java.util.List;
 import java.util.Map;
 
 public class RestAssuredAdvanced {
+//    RequestSpecification requestSpecification;
+//    ResponseSpecification responseSpecification;
+//    Response response;
+
     RequestSpecification requestSpecification;
     ResponseSpecification responseSpecification;
     Response response;
 
     @Before
     public void setUp(){
+//        RestAssured.baseURI = "http://api.football-data.org";
+//        RestAssured.basePath = "v2/competitions/";
+
         RestAssured.baseURI = "http://api.football-data.org";
         RestAssured.basePath = "v2/competitions/";
 
+      //   requestSpecification = new RequestSpecBuilder().setAccept(ContentType.JSON).build();
+        requestSpecification = new RequestSpecBuilder().setAccept(ContentType.JSON).build();
 
-         requestSpecification = new RequestSpecBuilder().setAccept(ContentType.JSON).build();
-         responseSpecification = new ResponseSpecBuilder().expectContentType(ContentType.JSON)
-                 .expectStatusCode(200).build();
-         response =given().spec(requestSpecification).when().get().then().spec(responseSpecification)
+//         responseSpecification = new ResponseSpecBuilder().expectContentType(ContentType.JSON)
+//                 .expectStatusCode(200).build();
+        responseSpecification = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+
+//         response =given().spec(requestSpecification).when().get().then().spec(responseSpecification)
+//                .extract().response();
+
+        response = given().spec(requestSpecification)
+                .when().get()
+                .then().spec(responseSpecification)
                 .extract().response();
     }
 
@@ -90,5 +105,9 @@ public class RestAssuredAdvanced {
         System.out.println(mexico);
 
     }
+
+
+
+
 
 }

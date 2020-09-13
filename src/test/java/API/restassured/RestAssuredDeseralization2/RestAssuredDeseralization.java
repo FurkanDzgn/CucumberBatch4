@@ -7,12 +7,16 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.http.ContentType;
+import io.restassured.mapper.ObjectMapper;
+import io.restassured.mapper.ObjectMapperType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
@@ -38,6 +42,9 @@ public class RestAssuredDeseralization {
         List<BreakingBad> badList = response.getBody().as(new TypeRef<List<BreakingBad>>() {});
         Assert.assertEquals("Juan Bolsa",badList.get(0).getName());
 
+//        List<JsonPath> jsonpth = response.as(new TypeRef<List<JsonPath>>() {});
+//        Assert.assertEquals("Juan Bolsa", jsonpth.get(0).get("name"));
+
     }
 
     @Test
@@ -49,6 +56,8 @@ public class RestAssuredDeseralization {
                 .as(new TypeRef<List<BreakingBad>>() {});
 
         Assert.assertEquals("Juan Bolsa",chracterResp.get(0).getName());
+
+        List<BreakingBad> charr = response.getBody().as(new TypeRef<List<BreakingBad>>() {});
 
     }
 

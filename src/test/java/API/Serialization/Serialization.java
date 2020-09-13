@@ -29,7 +29,7 @@ public class Serialization {
         pet.setPhotoUrl("https://s3.petpics.amazon.com");
 
         ObjectMapper objectMapper=new ObjectMapper();
-        objectMapper.writeValue(new File("target/pet.json"), pet);
+        objectMapper.writeValue(new File("target/pet.html"), pet);
     }
 
     @Test
