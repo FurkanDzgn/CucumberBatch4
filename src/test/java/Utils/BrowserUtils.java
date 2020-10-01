@@ -153,6 +153,7 @@ public class BrowserUtils {
     }
 
     public static Select getSelect(WebElement element){
+
         return new Select(element);
     }
 

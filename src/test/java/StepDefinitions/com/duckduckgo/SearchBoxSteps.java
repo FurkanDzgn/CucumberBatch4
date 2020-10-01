@@ -33,6 +33,7 @@ public class SearchBoxSteps {
     @Then("the user click search button")
     public void the_user_click_search_button() {
         page.searchButton.click();
+        System.out.println(page.searchButton.getLocation().getX());
     }
 
     @Then("the user validate title contains the selenium keyword")
