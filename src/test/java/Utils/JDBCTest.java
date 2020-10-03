@@ -22,7 +22,7 @@ public class JDBCTest {
         Connection connection = DriverManager.getConnection(
                 "jdbc:oracle:thin:@duzgundatabase.cxc573ikkvq4.us-east-2.rds.amazonaws.com:1521/ORCL",
                      "duzgunDatabase",
-                "duzgunDatabase"); // host, username, password
+                "duzgunDatabase"); // host(URL) , username, password
 
         Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
         ResultSet resultSet = statement.executeQuery("select * from employees");

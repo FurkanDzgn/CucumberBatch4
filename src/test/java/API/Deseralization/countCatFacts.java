@@ -43,7 +43,7 @@ public class countCatFacts {
         Map<String, List> parsedResponse=objectMapper.readValue(httpResponse.getEntity().getContent(),
                 new TypeReference<Map<String, List>>() {});
 
-       System.out.println(parsedResponse);// --> I got all response
+        System.out.println(parsedResponse);// --> I got all response
         System.out.println(parsedResponse.get("all").size());
 
 

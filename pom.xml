@@ -111,9 +111,14 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/com.galenframework/galen-java-support -->
+        <dependency>
+            <groupId>com.galenframework</groupId>
+            <artifactId>galen-java-support</artifactId>
+            <version>2.4.4</version>
+        </dependency>
+
     </dependencies>
-
-
 
 <!--we use this plugin for First plugin run my code  -->
     <build>

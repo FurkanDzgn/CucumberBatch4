@@ -1,6 +1,6 @@
 package API.restassured.RestAssuredDeseralization2;
 
-import API.pojo.BreakingBad.BreakingBad;
+import     API.pojo.BreakingBad.BreakingBad;
 import API.pojo.Petstore.ResponseBody;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
