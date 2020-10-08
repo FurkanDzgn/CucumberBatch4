@@ -8,6 +8,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class HerokuAppSteps {
 
     WebDriver driver= Driver.getDriver();
@@ -24,6 +27,12 @@ public class HerokuAppSteps {
         BrowserUtils.switchFrameByIndex(driver,0);
         mainPage.textBox.clear();
         mainPage.textBox.sendKeys(docString);
+
+        Map<String,Object> map = new HashMap<>();
+
+        HashMap<String,Object> hashMap = new HashMap<>();
+
+
     }
 
 }

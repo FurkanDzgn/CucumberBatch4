@@ -5,6 +5,11 @@ import io.restassured.http.ContentType;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 
 public class RestAssured2 {
@@ -49,14 +54,15 @@ public class RestAssured2 {
     @Test
     public void getRequest3(){
 
-//        given().header("accept",ContentType.JSON)
-//                .when().get("https://api.got.show/api/map/characters/byId/5cc0743504e71a0010b852d9")
-//                .then().log().ifStatusCodeIsEqualTo(500).assertThat().statusCode(200)
-//                .contentType(ContentType.JSON)
-//                .body("data.books",Matchers.hasItem("A Storm of Swords"))
-//                .body("data.dateOfBirth",Matchers.equalTo(283))
-//                .body("data.house",Matchers.is("House Stark"))
-//                .body("data.male",Matchers.isA(Boolean.class));
+   /*     given().header("accept",ContentType.JSON)
+                .when().get("https://api.got.show/api/map/characters/byId/5cc0743504e71a0010b852d9")
+                .then().log().ifStatusCodeIsEqualTo(500).assertThat().statusCode(200)
+                .contentType(ContentType.JSON)
+                .body("data.books",Matchers.hasItem("A Storm of Swords"))
+                .body("data.dateOfBirth",Matchers.equalTo(283))
+                .body("data.house",Matchers.is("House Stark"))
+                .body("data.male",Matchers.isA(Boolean.class))
+                .body("data.books",Matchers.isA(ArrayList.class));*/
 
         RestAssured.baseURI="https://api.got.show";
         RestAssured.basePath="api/map/characters/byId/5cc0743504e71a0010b852d9";
@@ -68,7 +74,9 @@ public class RestAssured2 {
                 .body("books",Matchers.hasItem("A Storm of Swords"))
                 .body("dateOfBirth",Matchers.equalTo(283))
                 .body("house",Matchers.is("House Stark"))
-                .body("male",Matchers.isA(Boolean.class));
+                .body("data.male",Matchers.isA(Boolean.class))
+                .body("imageLink",Matchers.isA(String.class))
+                .body("data.books",Matchers.isA(ArrayList.class));
 
     }
 }
