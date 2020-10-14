@@ -118,12 +118,13 @@
             <version>2.4.4</version>
         </dependency> -->
 
-        <!-- https://mvnrepository.com/artifact/com.applitools/eyes-common-java4 -->
+        <!-- https://mvnrepository.com/artifact/com.applitools/eyes-selenium-java3 -->
         <dependency>
             <groupId>com.applitools</groupId>
-            <artifactId>eyes-common-java4</artifactId>
-            <version>4.14.0</version>
+            <artifactId>eyes-selenium-java3</artifactId>
+            <version>3.178.0</version>
         </dependency>
+
 
 
         <!-- https://mvnrepository.com/artifact/com.github.wnameless/json-flattener -->
