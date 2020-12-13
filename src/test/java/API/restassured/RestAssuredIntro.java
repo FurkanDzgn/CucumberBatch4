@@ -11,7 +11,7 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class RestAssuredIntro {
+ public class RestAssuredIntro {
 
     @Test
     public void rest1(){

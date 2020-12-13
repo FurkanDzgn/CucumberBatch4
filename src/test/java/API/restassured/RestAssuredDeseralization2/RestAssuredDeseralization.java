@@ -25,6 +25,7 @@ public class RestAssuredDeseralization {
     Response response;
     @Before
     public void setUp(){
+
         RestAssured.baseURI="https://breakingbadapi.com";
         RestAssured.basePath="/api/characters";
 
